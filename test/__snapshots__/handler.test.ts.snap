@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`handle Test Autodiscover URLs: Autodiscover 1`] = `
+"<?xml version=\\"1.0\\" encoding=\\"utf-8\\" ?>
+<Autodiscover xmlns=\\"http://schemas.microsoft.com/exchange/autodiscover/responseschema/2006\\">
+	<Response xmlns=\\"https://schemas.microsoft.com/exchange/autodiscover/outlook/requestschema/2006\\">
+		<User>
+			<DisplayName>COMPANY NAME Email</DisplayName>
+		</User>
+		<Account>
+			<AccountType>email</AccountType>
+			<Action>settings</Action>
+			<ServiceHome>support.company.com</ServiceHome>
+
+			<Protocol>
+				<Type>IMAP</Type>
+				<TTL>1</TTL>
+
+				<Server>mail.company.com</Server>
+				<Port>1234</Port>
+
+				<LoginName>user@contoso.com</LoginName>
+
+				<DomainRequired>on</DomainRequired>
+				<DomainName>contoso.com</DomainName>
+
+				<SPA>off</SPA>
+				<Encryption>SSL</Encryption>
+				<AuthRequired>on</AuthRequired>
+			</Protocol>
+		</Account>
+		<Account>
+			<AccountType>email</AccountType>
+			<Action>settings</Action>
+			<ServiceHome>support.company.com</ServiceHome>
+
+			<Protocol>
+				<Type>POP</Type>
+				<TTL>1</TTL>
+
+				<Server>mail.company.com</Server>
+				<Port>1234</Port>
+
+				<LoginName>user@contoso.com</LoginName>
+
+				<DomainRequired>on</DomainRequired>
+				<DomainName>contoso.com</DomainName>
+
+				<SPA>off</SPA>
+				<Encryption>SSL</Encryption>
+				<AuthRequired>on</AuthRequired>
+			</Protocol>
+		</Account>
+		<Account>
+			<AccountType>email</AccountType>
+			<Action>settings</Action>
+			<ServiceHome>support.company.com</ServiceHome>
+
+			<Protocol>
+				<Type>SMTP</Type>
+				<TTL>1</TTL>
+
+				<Server>mail.company.com</Server>
+				<Port>1234</Port>
+
+				<LoginName>user@contoso.com</LoginName>
+
+				<DomainRequired>on</DomainRequired>
+				<DomainName>contoso.com</DomainName>
+
+				<SPA>off</SPA>
+				<Encryption>SSL</Encryption>
+				<AuthRequired>on</AuthRequired>
+			</Protocol>
+		</Account>
+		<Action>
+			<Settings>
+				<Server>
+					<Type>MobileSync</Type>
+					<Url>mail.company.com</Url>
+					<Name>mobilesync</Name>
+					</Server>
+			</Settings>
+		</Action>
+		</Response>
+</Autodiscover>
+"
+`;

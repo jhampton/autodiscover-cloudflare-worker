@@ -1,0 +1,36 @@
+{
+  "transform": {
+    "^.+\\.(t|j)sx?$": "ts-jest"
+  },
+  "testRegex": "/test/.*\\.test\\.ts$",
+  "collectCoverageFrom": [
+    "src/**/*.{ts,js}"
+  ],
+  "globals": {
+    "__COMPANY_NAME__": "COMPANY NAME",
+    "__DOMAIN__": "company.com",
+    "__IMAP_HOST__": "mail.company.com",
+    "__IMAP_PORT__": 1234,
+    "__POP_HOST__": "mail.company.com",
+    "__POP_PORT__": 1234,
+    "__SMTP_HOST__": "mail.company.com",
+    "__SMTP_PORT__": 1234,
+    "__MOBILESYNC_URL__": "mail.company.com",
+    "__LDAP_HOST__": "mail.company.com",
+    "__LDAP_PORT__": 1234,
+    "__LDAP_SOCKET__": "SSL",
+    "__LDAP_BASE__": "__LDAP_BASE__",
+    "__LDAP_USER_FIELD__": "__LDAP_USER_FIELD__",
+    "__LDAP_USER_BASE__": "__LDAP_USER_BASE__",
+    "__PROFILE_IDENTIFIER__": "__PROFILE_IDENTIFIER__",
+    "__PROFILE_UUID__": "__PROFILE_UUID__",
+    "__MAIL_UUID__": "__MAIL_UUID__",
+    "__LDAP_UUID__": "__LDAP_UUID__",
+    "__IMAP_SOCKET__": "SSL",
+    "__POP_SOCKET__": "SSL",
+    "__SMTP_SOCKET__": "SSL",
+    "__MOBILESYNC_NAME__": "mobilesync",
+    "__LDAP_SEARCH__": "ldapsearch",
+    "__SUPPORT_URL__": "support.company.com"
+  }
+}
