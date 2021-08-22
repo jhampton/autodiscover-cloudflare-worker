@@ -2,7 +2,7 @@ import handleRequest from '../src/handler'
 import makeServiceWorkerEnv from 'service-worker-mock'
 import autodiscoverFixture from './autodiscover.fixure'
 
-declare var global: any
+declare let global: unknown
 
 const autodiscoverUrls = [
   { method: 'GET', url: '/autodiscover/autodiscover.xml' },
@@ -12,7 +12,6 @@ const autodiscoverUrls = [
 ]
 
 // SET ENV VARS - jestConfig
-
 describe('handle', () => {
   beforeEach(() => {
     Object.assign(global, makeServiceWorkerEnv())
