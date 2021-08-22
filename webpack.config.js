@@ -10,6 +10,15 @@ module.exports = {
   mode: 'development',
   resolve: {
     extensions: ['.ts', '.tsx', '.js'],
+    fallback: { 
+      "timers": require.resolve("timers-browserify"),
+      "path": false,
+      "string_decoder": require.resolve("string_decoder/"),
+      "fs": require.resolve('browserify-fs'),
+      "buffer": require.resolve("buffer/"),
+      "stream": require.resolve("stream-browserify"),
+      "util": require.resolve("util/")
+    }
   },
   module: {
     rules: [
