@@ -37,6 +37,9 @@ Replace above variables with data according to this table
 
 ## Usage
 
+- Clone this repo and make sure your have `wrangler` installed
+- `npm i` (of course)
+- To test, use `wrangler dev`, to build use `wrangler build`
 - Add the settings listed in `settings.js` to your Cloudflare Worker Environment Variables
 - Set up DNS records
 - Use `wrangler` to deploy your worker and wire it up
