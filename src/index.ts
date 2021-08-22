@@ -19,8 +19,9 @@ router.get('/autodiscover/autodiscover.xml', autodiscoverParsedXML)
 router.post('/autodiscover/autodiscover.xml', autodiscoverParsedXML)
 router.get('/Autodiscover/Autodiscover.xml', autodiscoverParsedXML)
 router.post('/Autodiscover/Autodiscover.xml', autodiscoverParsedXML)
+
 // Thunderbird
-router.get('/mail/config-v1.1.xml', autodiscoverParsedXML)
+// router.get('/mail/config-v1.1.xml', autoconfig)
 
 // Main entry point in workers
 addEventListener('fetch', (event) => {
