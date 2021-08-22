@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`handle Test Autodiscover URLs: Autodiscover 1`] = `
+exports[`handle Test Autodiscover URL /Autodiscover/Autodiscover.xml with method GET: GET--Autodiscover/Autodiscover.xml 1`] = `
 "<?xml version=\\"1.0\\" encoding=\\"utf-8\\" ?>
 <Autodiscover xmlns=\\"http://schemas.microsoft.com/exchange/autodiscover/responseschema/2006\\">
 	<Response xmlns=\\"https://schemas.microsoft.com/exchange/autodiscover/outlook/requestschema/2006\\">
@@ -84,5 +84,386 @@ exports[`handle Test Autodiscover URLs: Autodiscover 1`] = `
 		</Action>
 		</Response>
 </Autodiscover>
+"
+`;
+
+exports[`handle Test Autodiscover URL /Autodiscover/Autodiscover.xml with method POST: POST--Autodiscover/Autodiscover.xml 1`] = `
+"<?xml version=\\"1.0\\" encoding=\\"utf-8\\" ?>
+<Autodiscover xmlns=\\"http://schemas.microsoft.com/exchange/autodiscover/responseschema/2006\\">
+	<Response xmlns=\\"https://schemas.microsoft.com/exchange/autodiscover/outlook/requestschema/2006\\">
+		<User>
+			<DisplayName>COMPANY NAME Email</DisplayName>
+		</User>
+		<Account>
+			<AccountType>email</AccountType>
+			<Action>settings</Action>
+			<ServiceHome>support.company.com</ServiceHome>
+
+			<Protocol>
+				<Type>IMAP</Type>
+				<TTL>1</TTL>
+
+				<Server>mail.company.com</Server>
+				<Port>1234</Port>
+
+				<LoginName>user@contoso.com</LoginName>
+
+				<DomainRequired>on</DomainRequired>
+				<DomainName>contoso.com</DomainName>
+
+				<SPA>off</SPA>
+				<Encryption>SSL</Encryption>
+				<AuthRequired>on</AuthRequired>
+			</Protocol>
+		</Account>
+		<Account>
+			<AccountType>email</AccountType>
+			<Action>settings</Action>
+			<ServiceHome>support.company.com</ServiceHome>
+
+			<Protocol>
+				<Type>POP</Type>
+				<TTL>1</TTL>
+
+				<Server>mail.company.com</Server>
+				<Port>1234</Port>
+
+				<LoginName>user@contoso.com</LoginName>
+
+				<DomainRequired>on</DomainRequired>
+				<DomainName>contoso.com</DomainName>
+
+				<SPA>off</SPA>
+				<Encryption>SSL</Encryption>
+				<AuthRequired>on</AuthRequired>
+			</Protocol>
+		</Account>
+		<Account>
+			<AccountType>email</AccountType>
+			<Action>settings</Action>
+			<ServiceHome>support.company.com</ServiceHome>
+
+			<Protocol>
+				<Type>SMTP</Type>
+				<TTL>1</TTL>
+
+				<Server>mail.company.com</Server>
+				<Port>1234</Port>
+
+				<LoginName>user@contoso.com</LoginName>
+
+				<DomainRequired>on</DomainRequired>
+				<DomainName>contoso.com</DomainName>
+
+				<SPA>off</SPA>
+				<Encryption>SSL</Encryption>
+				<AuthRequired>on</AuthRequired>
+			</Protocol>
+		</Account>
+		<Action>
+			<Settings>
+				<Server>
+					<Type>MobileSync</Type>
+					<Url>mail.company.com</Url>
+					<Name>mobilesync</Name>
+					</Server>
+			</Settings>
+		</Action>
+		</Response>
+</Autodiscover>
+"
+`;
+
+exports[`handle Test Autodiscover URL /autodiscover/autodiscover.xml with method GET: GET--autodiscover/autodiscover.xml 1`] = `
+"<?xml version=\\"1.0\\" encoding=\\"utf-8\\" ?>
+<Autodiscover xmlns=\\"http://schemas.microsoft.com/exchange/autodiscover/responseschema/2006\\">
+	<Response xmlns=\\"https://schemas.microsoft.com/exchange/autodiscover/outlook/requestschema/2006\\">
+		<User>
+			<DisplayName>COMPANY NAME Email</DisplayName>
+		</User>
+		<Account>
+			<AccountType>email</AccountType>
+			<Action>settings</Action>
+			<ServiceHome>support.company.com</ServiceHome>
+
+			<Protocol>
+				<Type>IMAP</Type>
+				<TTL>1</TTL>
+
+				<Server>mail.company.com</Server>
+				<Port>1234</Port>
+
+				<LoginName>user@contoso.com</LoginName>
+
+				<DomainRequired>on</DomainRequired>
+				<DomainName>contoso.com</DomainName>
+
+				<SPA>off</SPA>
+				<Encryption>SSL</Encryption>
+				<AuthRequired>on</AuthRequired>
+			</Protocol>
+		</Account>
+		<Account>
+			<AccountType>email</AccountType>
+			<Action>settings</Action>
+			<ServiceHome>support.company.com</ServiceHome>
+
+			<Protocol>
+				<Type>POP</Type>
+				<TTL>1</TTL>
+
+				<Server>mail.company.com</Server>
+				<Port>1234</Port>
+
+				<LoginName>user@contoso.com</LoginName>
+
+				<DomainRequired>on</DomainRequired>
+				<DomainName>contoso.com</DomainName>
+
+				<SPA>off</SPA>
+				<Encryption>SSL</Encryption>
+				<AuthRequired>on</AuthRequired>
+			</Protocol>
+		</Account>
+		<Account>
+			<AccountType>email</AccountType>
+			<Action>settings</Action>
+			<ServiceHome>support.company.com</ServiceHome>
+
+			<Protocol>
+				<Type>SMTP</Type>
+				<TTL>1</TTL>
+
+				<Server>mail.company.com</Server>
+				<Port>1234</Port>
+
+				<LoginName>user@contoso.com</LoginName>
+
+				<DomainRequired>on</DomainRequired>
+				<DomainName>contoso.com</DomainName>
+
+				<SPA>off</SPA>
+				<Encryption>SSL</Encryption>
+				<AuthRequired>on</AuthRequired>
+			</Protocol>
+		</Account>
+		<Action>
+			<Settings>
+				<Server>
+					<Type>MobileSync</Type>
+					<Url>mail.company.com</Url>
+					<Name>mobilesync</Name>
+					</Server>
+			</Settings>
+		</Action>
+		</Response>
+</Autodiscover>
+"
+`;
+
+exports[`handle Test Autodiscover URL /autodiscover/autodiscover.xml with method POST: POST--autodiscover/autodiscover.xml 1`] = `
+"<?xml version=\\"1.0\\" encoding=\\"utf-8\\" ?>
+<Autodiscover xmlns=\\"http://schemas.microsoft.com/exchange/autodiscover/responseschema/2006\\">
+	<Response xmlns=\\"https://schemas.microsoft.com/exchange/autodiscover/outlook/requestschema/2006\\">
+		<User>
+			<DisplayName>COMPANY NAME Email</DisplayName>
+		</User>
+		<Account>
+			<AccountType>email</AccountType>
+			<Action>settings</Action>
+			<ServiceHome>support.company.com</ServiceHome>
+
+			<Protocol>
+				<Type>IMAP</Type>
+				<TTL>1</TTL>
+
+				<Server>mail.company.com</Server>
+				<Port>1234</Port>
+
+				<LoginName>user@contoso.com</LoginName>
+
+				<DomainRequired>on</DomainRequired>
+				<DomainName>contoso.com</DomainName>
+
+				<SPA>off</SPA>
+				<Encryption>SSL</Encryption>
+				<AuthRequired>on</AuthRequired>
+			</Protocol>
+		</Account>
+		<Account>
+			<AccountType>email</AccountType>
+			<Action>settings</Action>
+			<ServiceHome>support.company.com</ServiceHome>
+
+			<Protocol>
+				<Type>POP</Type>
+				<TTL>1</TTL>
+
+				<Server>mail.company.com</Server>
+				<Port>1234</Port>
+
+				<LoginName>user@contoso.com</LoginName>
+
+				<DomainRequired>on</DomainRequired>
+				<DomainName>contoso.com</DomainName>
+
+				<SPA>off</SPA>
+				<Encryption>SSL</Encryption>
+				<AuthRequired>on</AuthRequired>
+			</Protocol>
+		</Account>
+		<Account>
+			<AccountType>email</AccountType>
+			<Action>settings</Action>
+			<ServiceHome>support.company.com</ServiceHome>
+
+			<Protocol>
+				<Type>SMTP</Type>
+				<TTL>1</TTL>
+
+				<Server>mail.company.com</Server>
+				<Port>1234</Port>
+
+				<LoginName>user@contoso.com</LoginName>
+
+				<DomainRequired>on</DomainRequired>
+				<DomainName>contoso.com</DomainName>
+
+				<SPA>off</SPA>
+				<Encryption>SSL</Encryption>
+				<AuthRequired>on</AuthRequired>
+			</Protocol>
+		</Account>
+		<Action>
+			<Settings>
+				<Server>
+					<Type>MobileSync</Type>
+					<Url>mail.company.com</Url>
+					<Name>mobilesync</Name>
+					</Server>
+			</Settings>
+		</Action>
+		</Response>
+</Autodiscover>
+"
+`;
+
+exports[`handle Test Mobileconfig URL with method GET: Mobileconfig 1`] = `
+"<?xml version=\\"1.0\\" encoding=\\"UTF-8\\"?>
+<!DOCTYPE plist PUBLIC \\"-//Apple//DTD PLIST 1.0//EN\\" \\"http://www.apple.com/DTDs/PropertyList-1.0.dtd\\">
+<plist version=\\"1.0\\">
+<dict>
+	<key>HasRemovalPasscode</key>
+	<false/>
+	<key>PayloadContent</key>
+	<array>
+
+		<dict>
+			<key>EmailAccountDescription</key>
+			<string>username@domain.com</string>
+			<key>EmailAccountName</key>
+			<string>username@domain.com</string>
+			<key>EmailAccountType</key>
+			<string>EmailTypeIMAP</string>
+			<key>EmailAddress</key>
+			<string>username@domain.com</string>
+			<key>IncomingMailServerAuthentication</key>
+			<string>EmailAuthPassword</string>
+			<key>IncomingMailServerHostName</key>
+			<string>mail.company.com</string>
+			<key>IncomingMailServerPortNumber</key>
+			<integer>1234</integer>
+			<key>IncomingMailServerUseSSL</key>
+			<true/>
+			<key>IncomingMailServerUsername</key>
+			<string>username@domain.com</string>
+			<key>OutgoingPasswordSameAsIncomingPassword</key>
+			<true/>
+			<key>OutgoingMailServerAuthentication</key>
+			<string>EmailAuthPassword</string>
+			<key>OutgoingMailServerHostName</key>
+			<string>mail.company.com</string>
+			<key>OutgoingMailServerPortNumber</key>
+			<integer>1234</integer>
+			<key>OutgoingMailServerUseSSL</key>
+			<true/>
+			<key>OutgoingMailServerUsername</key>
+			<string>username@domain.com</string>
+			<key>SMIMEEnabled</key>
+			<false/>
+			<key>SMIMEEnablePerMessageSwitch</key>
+			<false/>
+			<key>SMIMEEnableEncryptionPerMessageSwitch</key>
+			<false/>
+			<key>disableMailRecentsSyncing</key>
+			<false/>
+			<key>PayloadDescription</key>
+			<string>COMPANY NAME Email</string>
+			<key>PayloadDisplayName</key>
+			<string>username@domain.com</string>
+			<key>PayloadIdentifier</key>
+			<string>__PROFILE_IDENTIFIER__.com.apple.mail.managed.__MAIL_UUID__</string>
+			<key>PayloadType</key>
+			<string>com.apple.mail.managed</string>
+			<key>PayloadUUID</key>
+			<string>__MAIL_UUID__</string>
+			<key>PayloadVersion</key>
+			<real>1</real>
+		</dict>
+
+
+		<dict>
+			<key>LDAPAccountDescription</key>
+			<string>COMPANY NAME LDAP</string>
+			<key>LDAPAccountHostName</key>
+			<string>mail.company.com</string>
+			<key>LDAPAccountUseSSL</key>
+			<true/>
+			<key>LDAPAccountUserName</key>
+			<string>__LDAP_USER_FIELD__=username,__LDAP_USER_BASE__</string>
+			<key>LDAPSearchSettings</key>
+			<array>
+				<dict>
+					<key>LDAPSearchSettingDescription</key>
+					<string>COMPANY NAME Contacts</string>
+					<key>LDAPSearchSettingSearchBase</key>
+					<string>__LDAP_BASE__</string>
+					<key>LDAPSearchSettingScope</key>
+					<string>LDAPSearchSettingScopeSubtree</string>
+				</dict>
+			</array>
+			<key>PayloadDescription</key>
+			<string>COMPANY NAME LDAP</string>
+			<key>PayloadDisplayName</key>
+			<string>COMPANY NAME Contacts</string>
+			<key>PayloadIdentifier</key>
+			<string>__PROFILE_IDENTIFIER__.com.apple.ldap.account.__LDAP_UUID__</string>
+			<key>PayloadType</key>
+			<string>com.apple.ldap.account</string>
+			<key>PayloadUUID</key>
+			<string>__LDAP_UUID__</string>
+			<key>PayloadVersion</key>
+			<real>1</real>
+		</dict>
+
+	</array>
+	<key>PayloadDescription</key>
+	<string>COMPANY NAME</string>
+	<key>PayloadDisplayName</key>
+	<string>COMPANY NAME</string>
+	<key>PayloadIdentifier</key>
+	<string>__PROFILE_IDENTIFIER__</string>
+	<key>PayloadOrganization</key>
+	<string>domain.com</string>
+	<key>PayloadRemovalDisallowed</key>
+	<false/>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>__PROFILE_UUID__</string>
+	<key>PayloadVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
 "
 `;

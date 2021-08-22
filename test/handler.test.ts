@@ -4,6 +4,13 @@ import autodiscoverFixture from './autodiscover.fixure'
 
 declare var global: any
 
+const autodiscoverUrls = [
+  { method: 'GET', url: '/autodiscover/autodiscover.xml' },
+  { method: 'POST', url: '/autodiscover/autodiscover.xml' },
+  { method: 'GET', url: '/Autodiscover/Autodiscover.xml' },
+  { method: 'POST', url: '/Autodiscover/Autodiscover.xml' },
+]
+
 // SET ENV VARS - jestConfig
 
 describe('handle', () => {
@@ -23,18 +30,35 @@ describe('handle', () => {
     expect(result.status).toEqual(404)
   })
 
-  test('Test Autodiscover URLs', async () => {
-    const testRequest = new Request(
-      'http://company.com/autodiscover/autodiscover.xml',
-      {
-        method: 'GET',
+  // Test all variations of Autodiscover routes
+  autodiscoverUrls.map((route) => {
+    test(`Test Autodiscover URL ${route.url} with method ${route.method}`, async () => {
+      const testRequest = new Request(`http://company.com${route.url}`, {
+        method: route.method,
         body: autodiscoverFixture,
         headers: { 'Content-type': 'application/xml' },
+      })
+      const result = await handleRequest(testRequest)
+      expect(result.status).toEqual(200)
+      const text = await result.text()
+      expect(text).toMatchSnapshot(
+        `${route.method}-${route.url.replace('/', '-')}`,
+      )
+    })
+  })
+
+  test(`Test Mobileconfig URL with method GET`, async () => {
+    const testRequest = new Request(
+      `http://company.com/email.mobileconfig?email=username@domain.com`,
+      {
+        method: 'GET',
+        body: '',
+        headers: { 'Content-type': 'text' },
       },
     )
     const result = await handleRequest(testRequest)
     expect(result.status).toEqual(200)
     const text = await result.text()
-    expect(text).toMatchSnapshot('Autodiscover')
+    expect(text).toMatchSnapshot(`Mobileconfig`)
   })
 })
