@@ -61,4 +61,16 @@ describe('handle', () => {
     const text = await result.text()
     expect(text).toMatchSnapshot(`Mobileconfig`)
   })
+
+  test(`Test Autoconfig URL with method GET`, async () => {
+    const testRequest = new Request(`http://company.com/mail/config-v1.1.xml`, {
+      method: 'GET',
+      body: '',
+      headers: { 'Content-type': 'text' },
+    })
+    const result = await handleRequest(testRequest)
+    expect(result.status).toEqual(200)
+    const text = await result.text()
+    expect(text).toMatchSnapshot(`Mobileconfig`)
+  })
 })

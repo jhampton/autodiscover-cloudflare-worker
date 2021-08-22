@@ -3,6 +3,7 @@ import xmlBodyParser from './utils/xmlBodyParser'
 import autodiscover from './autodiscover'
 import settings from './settings'
 import mobileconfig from './mobileconfig'
+import autoconfig from './autoconfig'
 
 const router = new Router()
 // router.get('/worker', async () => new Response('Hi from worker!'))
@@ -20,7 +21,7 @@ router.post('/autodiscover/autodiscover.xml', autodiscoverParsedXML)
 router.get('/Autodiscover/Autodiscover.xml', autodiscoverParsedXML)
 router.post('/Autodiscover/Autodiscover.xml', autodiscoverParsedXML)
 // Thunderbird
-router.get('/mail/config-v1.1.xml', autodiscoverParsedXML)
+router.get('/mail/config-v1.1.xml', autoconfig(settings))
 // iOS / Apple Mail (/email.mobileconfig?email=username@domain.com or /email.mobileconfig?email=username)
 router.get('/email.mobileconfig', mobileconfig(settings))
 

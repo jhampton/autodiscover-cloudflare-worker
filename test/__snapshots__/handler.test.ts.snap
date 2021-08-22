@@ -1,5 +1,45 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`handle Test Autoconfig URL with method GET: Mobileconfig 1`] = `
+"<?xml version=\\"1.0\\" encoding=\\"UTF-8\\"?>
+<clientConfig version=\\"1.1\\">
+	<emailProvider id=\\"company.com\\">
+	    <domain>company.com</domain>
+
+	    <displayName>COMPANY NAME Email</displayName>
+	    <displayShortName>%EMAILLOCALPART%</displayShortName>
+	    <incomingServer type=\\"imap\\">
+			<hostname>mail.company.com</hostname>
+			<port>1234</port>
+			<socketType>SSL</socketType>
+			<authentication>password-cleartext</authentication>
+			<username>%EMAILADDRESS%</username>
+		</incomingServer>
+	    <incomingServer type=\\"pop3\\">
+			<hostname>mail.company.com</hostname>
+			<port>1234</port>
+			<socketType>SSL</socketType>
+			<authentication>password-cleartext</authentication>
+			<username>%EMAILADDRESS%</username>
+		</incomingServer>
+	    <outgoingServer type=\\"smtp\\">
+			<hostname>mail.company.com</hostname>
+			<port>1234</port>
+			<socketType>SSL</socketType>
+			<authentication>password-cleartext</authentication>
+			<username>%EMAILADDRESS%</username>
+	    </outgoingServer>
+		<documentation url=\\"support.company.com\\">
+			<descr lang=\\"en\\">Generic settings page</descr>
+			<descr lang=\\"fr\\">Paramètres généraux</descr>
+			<descr lang=\\"es\\">Configuraciones genéricas</descr>
+			<descr lang=\\"de\\">Allgemeine Beschreibung der Einstellungen</descr>
+			<descr lang=\\"ru\\">Страница общих настроек</descr>
+		</documentation>
+	</emailProvider>
+</clientConfig>"
+`;
+
 exports[`handle Test Autodiscover URL /Autodiscover/Autodiscover.xml with method GET: GET--Autodiscover/Autodiscover.xml 1`] = `
 "<?xml version=\\"1.0\\" encoding=\\"utf-8\\" ?>
 <Autodiscover xmlns=\\"http://schemas.microsoft.com/exchange/autodiscover/responseschema/2006\\">
