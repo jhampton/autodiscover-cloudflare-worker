@@ -257,9 +257,9 @@ export default `<!DOCTYPE html>
 
             <div class="mt-2 mt-md-0 align-items-center">
                 <a class="text-muted" href="#" onclick="switchTheme();">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="theme-switch" width="30" height="30"
-                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="mx-3" role="img"
-                        viewBox="0 0 24 24" focusable="false">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="theme-switch mx-3" width="30" height="30"
+                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2" role="img" viewBox="0 0 24 24" 
+                        focusable="false">
                         <title>Switch theme</title>
                         <circle cx="12.5" cy="12.5" r="10"></circle>
                         <circle cx="5" cy="12.5" r="10" class="shadow"></circle>

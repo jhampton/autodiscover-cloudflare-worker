@@ -39,10 +39,11 @@ Replace above variables with data according to this table
 
 - Clone this repo and make sure your have `wrangler` installed
 - `npm i` (of course)
+- Rename `wrangler.toml.example` to `wrangler.toml` and populate with variables. [Wrangler Docs](https://developers.cloudflare.com/workers/get-started/guide#6-preview-your-project)
 - To test, use `wrangler dev`, to build use `wrangler build`
-- Add the settings listed in `settings.js` to your Cloudflare Worker Environment Variables
-- Set up DNS records
-- Use `wrangler` to deploy your worker and wire it up
+- Add the settings listed in `settings.ts` to your Cloudflare Worker Environment Variables
+- Set up DNS records 
+- Use `wrangler` to deploy your worker
 
 ## Credits
 
