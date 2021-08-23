@@ -8,8 +8,8 @@ Based on https://github.com/Monogramm/autodiscover-email-settings
 
 ## DNS settings
 
-    autoconfig              IN      A      {{$AUTODISCOVER_IP}}
-    autodiscover            IN      A      {{$AUTODISCOVER_IP}}
+    autoconfig              IN      AAAA   {{$PROXIED_DNS}}
+    autodiscover            IN      AAAA   {{$PROXIED_DNS}}
     imap                    IN      CNAME  {{$MX_DOMAIN}}.
     smtp                    IN      CNAME  {{$MX_DOMAIN}}.
     @                       IN      MX 10  {{$MX_DOMAIN}}.
@@ -26,7 +26,7 @@ Replace above variables with data according to this table
 | --------------- | ----------------------------------- |
 | MX_DOMAIN       | The hostname name of your MX server |
 | DOMAIN          | Your apex/bare/naked Domain         |
-| AUTODISCOVER_IP | IP of the Autoconfig HTTP           |
+| PROXIED_DNS     | A placeholder `AAAA` record pointing to `100::`, which must be proxied through Cloudflare (orange-cloud in the DNS settings). This value specifically is the [reserved IPv6 discard prefix](https://tools.ietf.org/html/rfc6666) but is not the only value allowed. For example, you may also use an `A` record pointed to `192.0.2.1` or a `CNAME` pointed to any resolvable target. Whichever method you choose, your record must be proxied through Cloudflare (orange-clouded) and resolve successfully. |
 | IMAP_PORT       | Port for your IMAP server           |
 | POP_PORT        | Port for your POP server            |
 | SMTP_PORT       | Port for your SMTP server           |
@@ -37,7 +37,7 @@ Replace above variables with data according to this table
 
 ## Usage
 
-- Clone this repo and make sure your have `wrangler` installed
+- Clone this repo and make sure your have `wrangler` installed [Wrangler Docs](https://developers.cloudflare.com/workers/cli-wrangler/install-update#install)
 - `npm i` (of course)
 - Rename `wrangler.toml.example` to `wrangler.toml` and populate with variables. [Wrangler Docs](https://developers.cloudflare.com/workers/get-started/guide#6-preview-your-project)
 - To test, use `wrangler dev`, to build use `wrangler build`
