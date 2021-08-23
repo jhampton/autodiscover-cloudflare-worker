@@ -1,6 +1,6 @@
 import handleRequest from '../src/handler'
 import makeServiceWorkerEnv from 'service-worker-mock'
-import autodiscoverFixture from './autodiscover.fixure'
+import autoDiscoverFixture from './autodiscover.fixture'
 
 declare let global: unknown
 
@@ -22,7 +22,7 @@ describe('handle', () => {
     const result = await handleRequest(
       new Request('/', {
         method: 'GET',
-        body: autodiscoverFixture,
+        body: autoDiscoverFixture,
         headers: { 'Content-type': 'text/xml' },
       }),
     )
@@ -34,7 +34,7 @@ describe('handle', () => {
     test(`Test Autodiscover URL ${route.url} with method ${route.method}`, async () => {
       const testRequest = new Request(`http://company.com${route.url}`, {
         method: route.method,
-        body: autodiscoverFixture,
+        body: autoDiscoverFixture,
         headers: { 'Content-type': 'application/xml' },
       })
       const result = await handleRequest(testRequest)

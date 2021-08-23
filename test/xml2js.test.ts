@@ -1,6 +1,6 @@
 import parseStringPromise from '../src/utils/xml2js-parser'
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-const autodiscoverFixure = require('./autodiscover.fixure').default
+const autoDiscoverFixture = require('./autodiscover.fixture').default
 
 describe('Make sure we can parse an Autodiscover _raw_ request text', () => {
   beforeEach(() => {
@@ -10,7 +10,7 @@ describe('Make sure we can parse an Autodiscover _raw_ request text', () => {
   it('Will return nested properties', async () => {
     let bodyAsJson: any = {}
     try {
-      bodyAsJson = await parseStringPromise(autodiscoverFixure)
+      bodyAsJson = await parseStringPromise(autoDiscoverFixture)
     } catch (error) {
       console.error(error)
       expect(false)
@@ -22,7 +22,7 @@ describe('Make sure we can parse an Autodiscover _raw_ request text', () => {
   it('Can find an email address', async () => {
     let bodyAsJson: any = {}
     try {
-      bodyAsJson = await parseStringPromise(autodiscoverFixure)
+      bodyAsJson = await parseStringPromise(autoDiscoverFixture)
     } catch (error) {
       console.error(error)
     }
@@ -34,12 +34,12 @@ describe('Make sure we can parse an Autodiscover _raw_ request text', () => {
   it('Can find an AcceptableResponseSchema', async () => {
     let bodyAsJson: any = {}
     try {
-      bodyAsJson = await parseStringPromise(autodiscoverFixure)
+      bodyAsJson = await parseStringPromise(autoDiscoverFixture)
     } catch (error) {
       console.error(error)
     }
     expect(bodyAsJson.Autodiscover.Request.AcceptableResponseSchema).toEqual(
-      'https://schemas.microsoft.com/exchange/autodiscover/outlook/responseschema/2006a',
+      'http://schemas.microsoft.com/exchange/autodiscover/outlook/responseschema/2006a',
     )
   })
 })

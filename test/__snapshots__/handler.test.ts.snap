@@ -43,7 +43,7 @@ exports[`handle Test Autoconfig URL with method GET: Mobileconfig 1`] = `
 exports[`handle Test Autodiscover URL /Autodiscover/Autodiscover.xml with method GET: GET--Autodiscover/Autodiscover.xml 1`] = `
 "<?xml version=\\"1.0\\" encoding=\\"utf-8\\" ?>
 <Autodiscover xmlns=\\"http://schemas.microsoft.com/exchange/autodiscover/responseschema/2006\\">
-	<Response xmlns=\\"https://schemas.microsoft.com/exchange/autodiscover/outlook/requestschema/2006\\">
+	<Response xmlns=\\"http://schemas.microsoft.com/exchange/autodiscover/outlook/responseschema/2006a\\">
 		<User>
 			<DisplayName>COMPANY NAME Email</DisplayName>
 		</User>
@@ -130,7 +130,7 @@ exports[`handle Test Autodiscover URL /Autodiscover/Autodiscover.xml with method
 exports[`handle Test Autodiscover URL /Autodiscover/Autodiscover.xml with method POST: POST--Autodiscover/Autodiscover.xml 1`] = `
 "<?xml version=\\"1.0\\" encoding=\\"utf-8\\" ?>
 <Autodiscover xmlns=\\"http://schemas.microsoft.com/exchange/autodiscover/responseschema/2006\\">
-	<Response xmlns=\\"https://schemas.microsoft.com/exchange/autodiscover/outlook/requestschema/2006\\">
+	<Response xmlns=\\"http://schemas.microsoft.com/exchange/autodiscover/outlook/responseschema/2006a\\">
 		<User>
 			<DisplayName>COMPANY NAME Email</DisplayName>
 		</User>
@@ -217,7 +217,7 @@ exports[`handle Test Autodiscover URL /Autodiscover/Autodiscover.xml with method
 exports[`handle Test Autodiscover URL /autodiscover/autodiscover.xml with method GET: GET--autodiscover/autodiscover.xml 1`] = `
 "<?xml version=\\"1.0\\" encoding=\\"utf-8\\" ?>
 <Autodiscover xmlns=\\"http://schemas.microsoft.com/exchange/autodiscover/responseschema/2006\\">
-	<Response xmlns=\\"https://schemas.microsoft.com/exchange/autodiscover/outlook/requestschema/2006\\">
+	<Response xmlns=\\"http://schemas.microsoft.com/exchange/autodiscover/outlook/responseschema/2006a\\">
 		<User>
 			<DisplayName>COMPANY NAME Email</DisplayName>
 		</User>
@@ -304,7 +304,7 @@ exports[`handle Test Autodiscover URL /autodiscover/autodiscover.xml with method
 exports[`handle Test Autodiscover URL /autodiscover/autodiscover.xml with method POST: POST--autodiscover/autodiscover.xml 1`] = `
 "<?xml version=\\"1.0\\" encoding=\\"utf-8\\" ?>
 <Autodiscover xmlns=\\"http://schemas.microsoft.com/exchange/autodiscover/responseschema/2006\\">
-	<Response xmlns=\\"https://schemas.microsoft.com/exchange/autodiscover/outlook/requestschema/2006\\">
+	<Response xmlns=\\"http://schemas.microsoft.com/exchange/autodiscover/outlook/responseschema/2006a\\">
 		<User>
 			<DisplayName>COMPANY NAME Email</DisplayName>
 		</User>
