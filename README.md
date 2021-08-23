@@ -62,6 +62,7 @@ The above autoconfiguration methods assume the following:
 - Mozilla [Autoconfig configuration](https://developer.mozilla.org/en-US/docs/Mozilla/Thunderbird/Autoconfiguration/FileFormat/HowTo)
 
 - Microsoft [Exchange Command Reference](https://docs.microsoft.com/en-us/openspecs/exchange_server_protocols/ms-ascmd/1a3490f1-afe1-418a-aa92-6f630036d65a)
+- Microsoft [Outlook Protocol Examples](https://docs.microsoft.com/en-us/openspecs/exchange_server_protocols/ms-oxdscli/f9ed4346-0116-4cf4-a03c-034e6b6dd965)
 
 - Apple [ConfigurationProfile reference](https://developer.apple.com/library/archive/featuredarticles/iPhoneConfigurationProfileRef/index.html)
 
