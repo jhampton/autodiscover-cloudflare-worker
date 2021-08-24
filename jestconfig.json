@@ -6,6 +6,9 @@
   "collectCoverageFrom": [
     "src/**/*.{ts,js}"
   ],
+  "coverageReporters": [
+    "json-summary"
+  ],
   "globals": {
     "__COMPANY_NAME__": "COMPANY NAME",
     "__DOMAIN__": "company.com",
