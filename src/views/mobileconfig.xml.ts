@@ -1,4 +1,3 @@
-
 export default `<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -6,25 +5,24 @@ export default `<?xml version="1.0" encoding="UTF-8"?>
 	<key>HasRemovalPasscode</key>
 	<false/>
 	<key>PayloadContent</key>
-	<array>
-{% if imap.host || pop.host %}
+	<array>{{ #imapOrPop }}
 		<dict>
 			<key>EmailAccountDescription</key>
 			<string>{{email}}</string>
 			<key>EmailAccountName</key>
 			<string>{{email}}</string>
 			<key>EmailAccountType</key>
-			<string>{% if imap.host %}EmailTypeIMAP{% else %}EmailTypePOP{% endif %}</string>
+			<string>{{#imap.host}}EmailTypeIMAP{{/imap.host}}{{^imap.host}}EmailTypePOP{{/imap.host}}</string>
 			<key>EmailAddress</key>
 			<string>{{email}}</string>
 			<key>IncomingMailServerAuthentication</key>
 			<string>EmailAuthPassword</string>
 			<key>IncomingMailServerHostName</key>
-			<string>{% if imap.host %}{{imap.host}}{% else %}{{pop.host}}{% endif %}</string>
+			<string>{{ #imap.host }}{{ imap.host }}{{ /imap.host }}{{ ^imap.host }}{{ pop.host }}{{ /imap.host }}</string>
 			<key>IncomingMailServerPortNumber</key>
-			<integer>{% if imap.host %}{{imap.port}}{% else %}{{pop.port}}{% endif %}</integer>
+			<integer>{{ #imap.host }}{{imap.port}}{{ /imap.host }}{{ ^imap.host }}{{pop.port}}{{ /imap.host }}</integer>
 			<key>IncomingMailServerUseSSL</key>
-			<{%- if imap.host %}{{imapssl}}{% else %}{{popssl}}{% endif -%}/>
+			<{{ #imap.host }}{{imapssl}}{{ /imap.host}}{{ ^imap.host }}{{popssl}}{{ /imap.host}}/>
 			<key>IncomingMailServerUsername</key>
 			<string>{{email}}</string>
 			<key>OutgoingPasswordSameAsIncomingPassword</key>
@@ -59,9 +57,8 @@ export default `<?xml version="1.0" encoding="UTF-8"?>
 			<string>{{mobile.mail.uuid}}</string>
 			<key>PayloadVersion</key>
 			<real>1</real>
-		</dict>
-{% endif %}
-{% if ldap.host %}
+		</dict>{{ /imapOrPop }}
+		{{ #ldap.host }}
 		<dict>
 			<key>LDAPAccountDescription</key>
 			<string>{{info.name}} LDAP</string>
@@ -95,7 +92,7 @@ export default `<?xml version="1.0" encoding="UTF-8"?>
 			<key>PayloadVersion</key>
 			<real>1</real>
 		</dict>
-{% endif %}
+{{/ldap.host}}
 	</array>
 	<key>PayloadDescription</key>
 	<string>{{info.name}}</string>

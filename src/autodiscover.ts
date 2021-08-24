@@ -1,6 +1,6 @@
 import { TemplateSettings } from './types'
 import autoDiscoverTemplate from './views/autodiscover.xml'
-import swig from 'swig-templates'
+import { render } from 'mustache'
 
 // Microsoft Outlook
 export default (settings: TemplateSettings) =>
@@ -33,7 +33,6 @@ export default (settings: TemplateSettings) =>
     const smtpenc =
       settings.smtp.socket === 'STARTTLS' ? 'TLS' : settings.smtp.socket
 
-    const compiledTemplate = swig.compile(autoDiscoverTemplate)
     const locals = {
       ...settings,
       schema,
@@ -44,7 +43,7 @@ export default (settings: TemplateSettings) =>
       popenc,
       smtpenc,
     }
-    const output = compiledTemplate(locals)
+    const output = render(autoDiscoverTemplate, locals)
 
     return new Response(output, {
       headers: { 'content-type': 'application/xml' },

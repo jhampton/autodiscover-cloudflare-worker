@@ -119,10 +119,10 @@ exports[`handle Test Autodiscover URL /Autodiscover/Autodiscover.xml with method
 					<Type>MobileSync</Type>
 					<Url>mail.company.com</Url>
 					<Name>mobilesync</Name>
-					</Server>
+				</Server>
 			</Settings>
 		</Action>
-		</Response>
+	</Response>
 </Autodiscover>
 "
 `;
@@ -206,10 +206,10 @@ exports[`handle Test Autodiscover URL /Autodiscover/Autodiscover.xml with method
 					<Type>MobileSync</Type>
 					<Url>mail.company.com</Url>
 					<Name>mobilesync</Name>
-					</Server>
+				</Server>
 			</Settings>
 		</Action>
-		</Response>
+	</Response>
 </Autodiscover>
 "
 `;
@@ -293,10 +293,10 @@ exports[`handle Test Autodiscover URL /Autodiscover/Autodiscover.xml with method
 					<Type>MobileSync</Type>
 					<Url>mail.company.com</Url>
 					<Name>mobilesync</Name>
-					</Server>
+				</Server>
 			</Settings>
 		</Action>
-		</Response>
+	</Response>
 </Autodiscover>
 "
 `;
@@ -380,10 +380,10 @@ exports[`handle Test Autodiscover URL /Autodiscover/Autodiscover.xml with method
 					<Type>MobileSync</Type>
 					<Url>mail.company.com</Url>
 					<Name>mobilesync</Name>
-					</Server>
+				</Server>
 			</Settings>
 		</Action>
-		</Response>
+	</Response>
 </Autodiscover>
 "
 `;
@@ -467,10 +467,10 @@ exports[`handle Test Autodiscover URL /Autodiscover/Autodiscover.xml with method
 					<Type>MobileSync</Type>
 					<Url>mail.company.com</Url>
 					<Name>mobilesync</Name>
-					</Server>
+				</Server>
 			</Settings>
 		</Action>
-		</Response>
+	</Response>
 </Autodiscover>
 "
 `;
@@ -554,10 +554,10 @@ exports[`handle Test Autodiscover URL /Autodiscover/Autodiscover.xml with method
 					<Type>MobileSync</Type>
 					<Url>mail.company.com</Url>
 					<Name>mobilesync</Name>
-					</Server>
+				</Server>
 			</Settings>
 		</Action>
-		</Response>
+	</Response>
 </Autodiscover>
 "
 `;
@@ -641,10 +641,10 @@ exports[`handle Test Autodiscover URL /autodiscover/autodiscover.xml with method
 					<Type>MobileSync</Type>
 					<Url>mail.company.com</Url>
 					<Name>mobilesync</Name>
-					</Server>
+				</Server>
 			</Settings>
 		</Action>
-		</Response>
+	</Response>
 </Autodiscover>
 "
 `;
@@ -728,10 +728,10 @@ exports[`handle Test Autodiscover URL /autodiscover/autodiscover.xml with method
 					<Type>MobileSync</Type>
 					<Url>mail.company.com</Url>
 					<Name>mobilesync</Name>
-					</Server>
+				</Server>
 			</Settings>
 		</Action>
-		</Response>
+	</Response>
 </Autodiscover>
 "
 `;
@@ -815,10 +815,10 @@ exports[`handle Test Autodiscover URL /autodiscover/autodiscover.xml with method
 					<Type>MobileSync</Type>
 					<Url>mail.company.com</Url>
 					<Name>mobilesync</Name>
-					</Server>
+				</Server>
 			</Settings>
 		</Action>
-		</Response>
+	</Response>
 </Autodiscover>
 "
 `;
@@ -902,10 +902,10 @@ exports[`handle Test Autodiscover URL /autodiscover/autodiscover.xml with method
 					<Type>MobileSync</Type>
 					<Url>mail.company.com</Url>
 					<Name>mobilesync</Name>
-					</Server>
+				</Server>
 			</Settings>
 		</Action>
-		</Response>
+	</Response>
 </Autodiscover>
 "
 `;
@@ -989,10 +989,10 @@ exports[`handle Test Autodiscover URL /autodiscover/autodiscover.xml with method
 					<Type>MobileSync</Type>
 					<Url>mail.company.com</Url>
 					<Name>mobilesync</Name>
-					</Server>
+				</Server>
 			</Settings>
 		</Action>
-		</Response>
+	</Response>
 </Autodiscover>
 "
 `;
@@ -1076,10 +1076,10 @@ exports[`handle Test Autodiscover URL /autodiscover/autodiscover.xml with method
 					<Type>MobileSync</Type>
 					<Url>mail.company.com</Url>
 					<Name>mobilesync</Name>
-					</Server>
+				</Server>
 			</Settings>
 		</Action>
-		</Response>
+	</Response>
 </Autodiscover>
 "
 `;
@@ -1093,7 +1093,6 @@ exports[`handle Test Mobileconfig URL with method GET: Mobileconfig 1`] = `
 	<false/>
 	<key>PayloadContent</key>
 	<array>
-
 		<dict>
 			<key>EmailAccountDescription</key>
 			<string>username@domain.com</string>
@@ -1146,8 +1145,6 @@ exports[`handle Test Mobileconfig URL with method GET: Mobileconfig 1`] = `
 			<key>PayloadVersion</key>
 			<real>1</real>
 		</dict>
-
-
 		<dict>
 			<key>LDAPAccountDescription</key>
 			<string>COMPANY NAME LDAP</string>
@@ -1181,7 +1178,6 @@ exports[`handle Test Mobileconfig URL with method GET: Mobileconfig 1`] = `
 			<key>PayloadVersion</key>
 			<real>1</real>
 		</dict>
-
 	</array>
 	<key>PayloadDescription</key>
 	<string>COMPANY NAME</string>

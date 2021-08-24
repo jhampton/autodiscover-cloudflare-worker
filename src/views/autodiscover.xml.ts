@@ -1,12 +1,10 @@
-
 export default `<?xml version="1.0" encoding="utf-8" ?>
 <Autodiscover xmlns="http://schemas.microsoft.com/exchange/autodiscover/responseschema/2006">
-	<Response xmlns="{{schema}}">
+	<Response xmlns="{{{schema}}}">
 		<User>
 			<DisplayName>{{info.name}} Email</DisplayName>
 		</User>
-
-		{%- if imap.host %}
+		{{ #imap.host }}
 		<Account>
 			<AccountType>email</AccountType>
 			<Action>settings</Action>
@@ -29,9 +27,8 @@ export default `<?xml version="1.0" encoding="utf-8" ?>
 				<AuthRequired>on</AuthRequired>
 			</Protocol>
 		</Account>
-		{% endif -%}
-
-		{%- if pop.host %}
+		{{ /imap.host}}
+		{{ #pop.host }}
 		<Account>
 			<AccountType>email</AccountType>
 			<Action>settings</Action>
@@ -54,9 +51,8 @@ export default `<?xml version="1.0" encoding="utf-8" ?>
 				<AuthRequired>on</AuthRequired>
 			</Protocol>
 		</Account>
-		{% endif -%}
-
-		{%- if smtp.host %}
+		{{ /pop.host }}
+		{{ #smtp.host }}
 		<Account>
 			<AccountType>email</AccountType>
 			<Action>settings</Action>
@@ -79,21 +75,20 @@ export default `<?xml version="1.0" encoding="utf-8" ?>
 				<AuthRequired>on</AuthRequired>
 			</Protocol>
 		</Account>
-		{% endif -%}
-
-		{%- if mobilesync.url %}
+		{{ /smtp.host }}
+		{{ #mobilesync.url }}
 		<Action>
 			<Settings>
 				<Server>
 					<Type>MobileSync</Type>
 					<Url>{{mobilesync.url}}</Url>
-					{%- if mobilesync.name %}
+					{{ #mobilesync.name }}
 					<Name>{{mobilesync.name}}</Name>
-					{% endif -%}
+					{{ /mobilesync.name }}
 				</Server>
 			</Settings>
 		</Action>
-		{% endif -%}
+		{{ /mobilesync.url }}
 	</Response>
 </Autodiscover>
 `

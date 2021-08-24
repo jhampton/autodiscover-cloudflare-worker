@@ -1,6 +1,6 @@
 import { TemplateSettings } from './types'
 import mobileconfigTemplate from './views/mobileconfig.xml'
-import swig from 'swig-templates'
+import { render } from 'mustache'
 
 // Function to parse query strings
 const getParameterByName = (name: string, url: string) => {
@@ -58,8 +58,7 @@ export default (settings: TemplateSettings) =>
         ? 'true'
         : 'false'
 
-    const compiledTemplate = swig.compile(mobileconfigTemplate)
-    const output = compiledTemplate({
+    const output = render(mobileconfigTemplate, {
       ...settings,
       email,
       username,
@@ -68,6 +67,7 @@ export default (settings: TemplateSettings) =>
       popssl,
       smtpssl,
       ldapssl,
+      imapOrPop: settings.imap.host || settings.pop.host,
     })
 
     return new Response(output, {
