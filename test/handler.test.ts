@@ -1,6 +1,9 @@
 import handleRequest from '../src/handler'
 import makeServiceWorkerEnv from 'service-worker-mock'
 import autoDiscoverFixture from './autodiscover.fixture'
+import autoDiscoverBlankAcceptableSchemaFixture from './autodiscover-blank-acceptable-schema.fixture'
+import autoDiscoverMissingAcceptableSchemaFixture from './autodiscover-missing-acceptable-schema.fixture'
+autoDiscoverMissingAcceptableSchemaFixture
 
 declare let global: unknown
 
@@ -9,6 +12,18 @@ const autodiscoverUrls = [
   { method: 'POST', url: '/autodiscover/autodiscover.xml' },
   { method: 'GET', url: '/Autodiscover/Autodiscover.xml' },
   { method: 'POST', url: '/Autodiscover/Autodiscover.xml' },
+]
+
+const autoDiscoverFixtures = [
+  { name: 'Expected', fixture: autoDiscoverFixture },
+  {
+    name: 'Blank AcceptableSchema',
+    fixture: autoDiscoverBlankAcceptableSchemaFixture,
+  },
+  {
+    name: 'Missing AcceptableSchema',
+    fixture: autoDiscoverMissingAcceptableSchemaFixture,
+  },
 ]
 
 // SET ENV VARS - jestConfig
@@ -29,20 +44,22 @@ describe('handle', () => {
     expect(result.status).toEqual(404)
   })
 
-  // Test all variations of Autodiscover routes
-  autodiscoverUrls.map((route) => {
-    test(`Test Autodiscover URL ${route.url} with method ${route.method}`, async () => {
-      const testRequest = new Request(`http://company.com${route.url}`, {
-        method: route.method,
-        body: autoDiscoverFixture,
-        headers: { 'Content-type': 'application/xml' },
+  // Test all variations of Autodiscover routes with all fixtures
+  autoDiscoverFixtures.map((fixture) => {
+    autodiscoverUrls.map((route) => {
+      test(`Test Autodiscover URL ${route.url} with method ${route.method} and fixture ${fixture.name}`, async () => {
+        const testRequest = new Request(`http://company.com${route.url}`, {
+          method: route.method,
+          body: fixture.fixture,
+          headers: { 'Content-type': 'application/xml' },
+        })
+        const result = await handleRequest(testRequest)
+        expect(result.status).toEqual(200)
+        const text = await result.text()
+        expect(text).toMatchSnapshot(
+          `${route.method}-${route.url.replace('/', '-')}`,
+        )
       })
-      const result = await handleRequest(testRequest)
-      expect(result.status).toEqual(200)
-      const text = await result.text()
-      expect(text).toMatchSnapshot(
-        `${route.method}-${route.url.replace('/', '-')}`,
-      )
     })
   })
 

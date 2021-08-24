@@ -5,10 +5,10 @@ import swig from 'swig-templates'
 // Microsoft Outlook
 export default (settings: TemplateSettings) =>
   async (req: Request): Promise<Response> => {
-    const schema: string | null =
-      req.bodyXml?.Autodiscover?.Request?.AcceptableResponseSchema
-    const xmlns: string | null = schema !== null ? schema :
-      req.bodyXml?.Autodiscover?.$?.xmlns
+    const schema: string | null = req.bodyXml?.Autodiscover?.Request
+      ?.AcceptableResponseSchema
+      ? req.bodyXml?.Autodiscover?.Request?.AcceptableResponseSchema
+      : req.bodyXml?.Autodiscover?.$?.xmlns
     let email: string | null = req.bodyXml?.Autodiscover?.Request?.EMailAddress
 
     let username
@@ -36,7 +36,7 @@ export default (settings: TemplateSettings) =>
     const compiledTemplate = swig.compile(autoDiscoverTemplate)
     const locals = {
       ...settings,
-      schema: xmlns,
+      schema,
       email,
       username,
       domain,

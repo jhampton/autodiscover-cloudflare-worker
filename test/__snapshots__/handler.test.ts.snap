@@ -40,10 +40,532 @@ exports[`handle Test Autoconfig URL with method GET: Mobileconfig 1`] = `
 </clientConfig>"
 `;
 
+exports[`handle Test Autodiscover URL /Autodiscover/Autodiscover.xml with method GET and fixture Blank AcceptableSchema: GET--Autodiscover/Autodiscover.xml 1`] = `
+"<?xml version=\\"1.0\\" encoding=\\"utf-8\\" ?>
+<Autodiscover xmlns=\\"http://schemas.microsoft.com/exchange/autodiscover/responseschema/2006\\">
+	<Response xmlns=\\"http://schemas.microsoft.com/exchange/autodiscover/outlook/requestschema/2006\\">
+		<User>
+			<DisplayName>COMPANY NAME Email</DisplayName>
+		</User>
+		<Account>
+			<AccountType>email</AccountType>
+			<Action>settings</Action>
+			<ServiceHome>support.company.com</ServiceHome>
+
+			<Protocol>
+				<Type>IMAP</Type>
+				<TTL>1</TTL>
+
+				<Server>mail.company.com</Server>
+				<Port>1234</Port>
+
+				<LoginName>user@contoso.com</LoginName>
+
+				<DomainRequired>on</DomainRequired>
+				<DomainName>contoso.com</DomainName>
+
+				<SPA>off</SPA>
+				<Encryption>SSL</Encryption>
+				<AuthRequired>on</AuthRequired>
+			</Protocol>
+		</Account>
+		<Account>
+			<AccountType>email</AccountType>
+			<Action>settings</Action>
+			<ServiceHome>support.company.com</ServiceHome>
+
+			<Protocol>
+				<Type>POP</Type>
+				<TTL>1</TTL>
+
+				<Server>mail.company.com</Server>
+				<Port>1234</Port>
+
+				<LoginName>user@contoso.com</LoginName>
+
+				<DomainRequired>on</DomainRequired>
+				<DomainName>contoso.com</DomainName>
+
+				<SPA>off</SPA>
+				<Encryption>SSL</Encryption>
+				<AuthRequired>on</AuthRequired>
+			</Protocol>
+		</Account>
+		<Account>
+			<AccountType>email</AccountType>
+			<Action>settings</Action>
+			<ServiceHome>support.company.com</ServiceHome>
+
+			<Protocol>
+				<Type>SMTP</Type>
+				<TTL>1</TTL>
+
+				<Server>mail.company.com</Server>
+				<Port>1234</Port>
+
+				<LoginName>user@contoso.com</LoginName>
+
+				<DomainRequired>on</DomainRequired>
+				<DomainName>contoso.com</DomainName>
+
+				<SPA>off</SPA>
+				<Encryption>SSL</Encryption>
+				<AuthRequired>on</AuthRequired>
+			</Protocol>
+		</Account>
+		<Action>
+			<Settings>
+				<Server>
+					<Type>MobileSync</Type>
+					<Url>mail.company.com</Url>
+					<Name>mobilesync</Name>
+					</Server>
+			</Settings>
+		</Action>
+		</Response>
+</Autodiscover>
+"
+`;
+
+exports[`handle Test Autodiscover URL /Autodiscover/Autodiscover.xml with method GET and fixture Expected: GET--Autodiscover/Autodiscover.xml 1`] = `
+"<?xml version=\\"1.0\\" encoding=\\"utf-8\\" ?>
+<Autodiscover xmlns=\\"http://schemas.microsoft.com/exchange/autodiscover/responseschema/2006\\">
+	<Response xmlns=\\"http://schemas.microsoft.com/exchange/autodiscover/outlook/responseschema/2006a\\">
+		<User>
+			<DisplayName>COMPANY NAME Email</DisplayName>
+		</User>
+		<Account>
+			<AccountType>email</AccountType>
+			<Action>settings</Action>
+			<ServiceHome>support.company.com</ServiceHome>
+
+			<Protocol>
+				<Type>IMAP</Type>
+				<TTL>1</TTL>
+
+				<Server>mail.company.com</Server>
+				<Port>1234</Port>
+
+				<LoginName>user@contoso.com</LoginName>
+
+				<DomainRequired>on</DomainRequired>
+				<DomainName>contoso.com</DomainName>
+
+				<SPA>off</SPA>
+				<Encryption>SSL</Encryption>
+				<AuthRequired>on</AuthRequired>
+			</Protocol>
+		</Account>
+		<Account>
+			<AccountType>email</AccountType>
+			<Action>settings</Action>
+			<ServiceHome>support.company.com</ServiceHome>
+
+			<Protocol>
+				<Type>POP</Type>
+				<TTL>1</TTL>
+
+				<Server>mail.company.com</Server>
+				<Port>1234</Port>
+
+				<LoginName>user@contoso.com</LoginName>
+
+				<DomainRequired>on</DomainRequired>
+				<DomainName>contoso.com</DomainName>
+
+				<SPA>off</SPA>
+				<Encryption>SSL</Encryption>
+				<AuthRequired>on</AuthRequired>
+			</Protocol>
+		</Account>
+		<Account>
+			<AccountType>email</AccountType>
+			<Action>settings</Action>
+			<ServiceHome>support.company.com</ServiceHome>
+
+			<Protocol>
+				<Type>SMTP</Type>
+				<TTL>1</TTL>
+
+				<Server>mail.company.com</Server>
+				<Port>1234</Port>
+
+				<LoginName>user@contoso.com</LoginName>
+
+				<DomainRequired>on</DomainRequired>
+				<DomainName>contoso.com</DomainName>
+
+				<SPA>off</SPA>
+				<Encryption>SSL</Encryption>
+				<AuthRequired>on</AuthRequired>
+			</Protocol>
+		</Account>
+		<Action>
+			<Settings>
+				<Server>
+					<Type>MobileSync</Type>
+					<Url>mail.company.com</Url>
+					<Name>mobilesync</Name>
+					</Server>
+			</Settings>
+		</Action>
+		</Response>
+</Autodiscover>
+"
+`;
+
+exports[`handle Test Autodiscover URL /Autodiscover/Autodiscover.xml with method GET and fixture Missing AcceptableSchema: GET--Autodiscover/Autodiscover.xml 1`] = `
+"<?xml version=\\"1.0\\" encoding=\\"utf-8\\" ?>
+<Autodiscover xmlns=\\"http://schemas.microsoft.com/exchange/autodiscover/responseschema/2006\\">
+	<Response xmlns=\\"http://schemas.microsoft.com/exchange/autodiscover/outlook/requestschema/2006\\">
+		<User>
+			<DisplayName>COMPANY NAME Email</DisplayName>
+		</User>
+		<Account>
+			<AccountType>email</AccountType>
+			<Action>settings</Action>
+			<ServiceHome>support.company.com</ServiceHome>
+
+			<Protocol>
+				<Type>IMAP</Type>
+				<TTL>1</TTL>
+
+				<Server>mail.company.com</Server>
+				<Port>1234</Port>
+
+				<LoginName>user@contoso.com</LoginName>
+
+				<DomainRequired>on</DomainRequired>
+				<DomainName>contoso.com</DomainName>
+
+				<SPA>off</SPA>
+				<Encryption>SSL</Encryption>
+				<AuthRequired>on</AuthRequired>
+			</Protocol>
+		</Account>
+		<Account>
+			<AccountType>email</AccountType>
+			<Action>settings</Action>
+			<ServiceHome>support.company.com</ServiceHome>
+
+			<Protocol>
+				<Type>POP</Type>
+				<TTL>1</TTL>
+
+				<Server>mail.company.com</Server>
+				<Port>1234</Port>
+
+				<LoginName>user@contoso.com</LoginName>
+
+				<DomainRequired>on</DomainRequired>
+				<DomainName>contoso.com</DomainName>
+
+				<SPA>off</SPA>
+				<Encryption>SSL</Encryption>
+				<AuthRequired>on</AuthRequired>
+			</Protocol>
+		</Account>
+		<Account>
+			<AccountType>email</AccountType>
+			<Action>settings</Action>
+			<ServiceHome>support.company.com</ServiceHome>
+
+			<Protocol>
+				<Type>SMTP</Type>
+				<TTL>1</TTL>
+
+				<Server>mail.company.com</Server>
+				<Port>1234</Port>
+
+				<LoginName>user@contoso.com</LoginName>
+
+				<DomainRequired>on</DomainRequired>
+				<DomainName>contoso.com</DomainName>
+
+				<SPA>off</SPA>
+				<Encryption>SSL</Encryption>
+				<AuthRequired>on</AuthRequired>
+			</Protocol>
+		</Account>
+		<Action>
+			<Settings>
+				<Server>
+					<Type>MobileSync</Type>
+					<Url>mail.company.com</Url>
+					<Name>mobilesync</Name>
+					</Server>
+			</Settings>
+		</Action>
+		</Response>
+</Autodiscover>
+"
+`;
+
 exports[`handle Test Autodiscover URL /Autodiscover/Autodiscover.xml with method GET: GET--Autodiscover/Autodiscover.xml 1`] = `
 "<?xml version=\\"1.0\\" encoding=\\"utf-8\\" ?>
 <Autodiscover xmlns=\\"http://schemas.microsoft.com/exchange/autodiscover/responseschema/2006\\">
 	<Response xmlns=\\"http://schemas.microsoft.com/exchange/autodiscover/outlook/responseschema/2006a\\">
+		<User>
+			<DisplayName>COMPANY NAME Email</DisplayName>
+		</User>
+		<Account>
+			<AccountType>email</AccountType>
+			<Action>settings</Action>
+			<ServiceHome>support.company.com</ServiceHome>
+
+			<Protocol>
+				<Type>IMAP</Type>
+				<TTL>1</TTL>
+
+				<Server>mail.company.com</Server>
+				<Port>1234</Port>
+
+				<LoginName>user@contoso.com</LoginName>
+
+				<DomainRequired>on</DomainRequired>
+				<DomainName>contoso.com</DomainName>
+
+				<SPA>off</SPA>
+				<Encryption>SSL</Encryption>
+				<AuthRequired>on</AuthRequired>
+			</Protocol>
+		</Account>
+		<Account>
+			<AccountType>email</AccountType>
+			<Action>settings</Action>
+			<ServiceHome>support.company.com</ServiceHome>
+
+			<Protocol>
+				<Type>POP</Type>
+				<TTL>1</TTL>
+
+				<Server>mail.company.com</Server>
+				<Port>1234</Port>
+
+				<LoginName>user@contoso.com</LoginName>
+
+				<DomainRequired>on</DomainRequired>
+				<DomainName>contoso.com</DomainName>
+
+				<SPA>off</SPA>
+				<Encryption>SSL</Encryption>
+				<AuthRequired>on</AuthRequired>
+			</Protocol>
+		</Account>
+		<Account>
+			<AccountType>email</AccountType>
+			<Action>settings</Action>
+			<ServiceHome>support.company.com</ServiceHome>
+
+			<Protocol>
+				<Type>SMTP</Type>
+				<TTL>1</TTL>
+
+				<Server>mail.company.com</Server>
+				<Port>1234</Port>
+
+				<LoginName>user@contoso.com</LoginName>
+
+				<DomainRequired>on</DomainRequired>
+				<DomainName>contoso.com</DomainName>
+
+				<SPA>off</SPA>
+				<Encryption>SSL</Encryption>
+				<AuthRequired>on</AuthRequired>
+			</Protocol>
+		</Account>
+		<Action>
+			<Settings>
+				<Server>
+					<Type>MobileSync</Type>
+					<Url>mail.company.com</Url>
+					<Name>mobilesync</Name>
+					</Server>
+			</Settings>
+		</Action>
+		</Response>
+</Autodiscover>
+"
+`;
+
+exports[`handle Test Autodiscover URL /Autodiscover/Autodiscover.xml with method POST and fixture Blank AcceptableSchema: POST--Autodiscover/Autodiscover.xml 1`] = `
+"<?xml version=\\"1.0\\" encoding=\\"utf-8\\" ?>
+<Autodiscover xmlns=\\"http://schemas.microsoft.com/exchange/autodiscover/responseschema/2006\\">
+	<Response xmlns=\\"http://schemas.microsoft.com/exchange/autodiscover/outlook/requestschema/2006\\">
+		<User>
+			<DisplayName>COMPANY NAME Email</DisplayName>
+		</User>
+		<Account>
+			<AccountType>email</AccountType>
+			<Action>settings</Action>
+			<ServiceHome>support.company.com</ServiceHome>
+
+			<Protocol>
+				<Type>IMAP</Type>
+				<TTL>1</TTL>
+
+				<Server>mail.company.com</Server>
+				<Port>1234</Port>
+
+				<LoginName>user@contoso.com</LoginName>
+
+				<DomainRequired>on</DomainRequired>
+				<DomainName>contoso.com</DomainName>
+
+				<SPA>off</SPA>
+				<Encryption>SSL</Encryption>
+				<AuthRequired>on</AuthRequired>
+			</Protocol>
+		</Account>
+		<Account>
+			<AccountType>email</AccountType>
+			<Action>settings</Action>
+			<ServiceHome>support.company.com</ServiceHome>
+
+			<Protocol>
+				<Type>POP</Type>
+				<TTL>1</TTL>
+
+				<Server>mail.company.com</Server>
+				<Port>1234</Port>
+
+				<LoginName>user@contoso.com</LoginName>
+
+				<DomainRequired>on</DomainRequired>
+				<DomainName>contoso.com</DomainName>
+
+				<SPA>off</SPA>
+				<Encryption>SSL</Encryption>
+				<AuthRequired>on</AuthRequired>
+			</Protocol>
+		</Account>
+		<Account>
+			<AccountType>email</AccountType>
+			<Action>settings</Action>
+			<ServiceHome>support.company.com</ServiceHome>
+
+			<Protocol>
+				<Type>SMTP</Type>
+				<TTL>1</TTL>
+
+				<Server>mail.company.com</Server>
+				<Port>1234</Port>
+
+				<LoginName>user@contoso.com</LoginName>
+
+				<DomainRequired>on</DomainRequired>
+				<DomainName>contoso.com</DomainName>
+
+				<SPA>off</SPA>
+				<Encryption>SSL</Encryption>
+				<AuthRequired>on</AuthRequired>
+			</Protocol>
+		</Account>
+		<Action>
+			<Settings>
+				<Server>
+					<Type>MobileSync</Type>
+					<Url>mail.company.com</Url>
+					<Name>mobilesync</Name>
+					</Server>
+			</Settings>
+		</Action>
+		</Response>
+</Autodiscover>
+"
+`;
+
+exports[`handle Test Autodiscover URL /Autodiscover/Autodiscover.xml with method POST and fixture Expected: POST--Autodiscover/Autodiscover.xml 1`] = `
+"<?xml version=\\"1.0\\" encoding=\\"utf-8\\" ?>
+<Autodiscover xmlns=\\"http://schemas.microsoft.com/exchange/autodiscover/responseschema/2006\\">
+	<Response xmlns=\\"http://schemas.microsoft.com/exchange/autodiscover/outlook/responseschema/2006a\\">
+		<User>
+			<DisplayName>COMPANY NAME Email</DisplayName>
+		</User>
+		<Account>
+			<AccountType>email</AccountType>
+			<Action>settings</Action>
+			<ServiceHome>support.company.com</ServiceHome>
+
+			<Protocol>
+				<Type>IMAP</Type>
+				<TTL>1</TTL>
+
+				<Server>mail.company.com</Server>
+				<Port>1234</Port>
+
+				<LoginName>user@contoso.com</LoginName>
+
+				<DomainRequired>on</DomainRequired>
+				<DomainName>contoso.com</DomainName>
+
+				<SPA>off</SPA>
+				<Encryption>SSL</Encryption>
+				<AuthRequired>on</AuthRequired>
+			</Protocol>
+		</Account>
+		<Account>
+			<AccountType>email</AccountType>
+			<Action>settings</Action>
+			<ServiceHome>support.company.com</ServiceHome>
+
+			<Protocol>
+				<Type>POP</Type>
+				<TTL>1</TTL>
+
+				<Server>mail.company.com</Server>
+				<Port>1234</Port>
+
+				<LoginName>user@contoso.com</LoginName>
+
+				<DomainRequired>on</DomainRequired>
+				<DomainName>contoso.com</DomainName>
+
+				<SPA>off</SPA>
+				<Encryption>SSL</Encryption>
+				<AuthRequired>on</AuthRequired>
+			</Protocol>
+		</Account>
+		<Account>
+			<AccountType>email</AccountType>
+			<Action>settings</Action>
+			<ServiceHome>support.company.com</ServiceHome>
+
+			<Protocol>
+				<Type>SMTP</Type>
+				<TTL>1</TTL>
+
+				<Server>mail.company.com</Server>
+				<Port>1234</Port>
+
+				<LoginName>user@contoso.com</LoginName>
+
+				<DomainRequired>on</DomainRequired>
+				<DomainName>contoso.com</DomainName>
+
+				<SPA>off</SPA>
+				<Encryption>SSL</Encryption>
+				<AuthRequired>on</AuthRequired>
+			</Protocol>
+		</Account>
+		<Action>
+			<Settings>
+				<Server>
+					<Type>MobileSync</Type>
+					<Url>mail.company.com</Url>
+					<Name>mobilesync</Name>
+					</Server>
+			</Settings>
+		</Action>
+		</Response>
+</Autodiscover>
+"
+`;
+
+exports[`handle Test Autodiscover URL /Autodiscover/Autodiscover.xml with method POST and fixture Missing AcceptableSchema: POST--Autodiscover/Autodiscover.xml 1`] = `
+"<?xml version=\\"1.0\\" encoding=\\"utf-8\\" ?>
+<Autodiscover xmlns=\\"http://schemas.microsoft.com/exchange/autodiscover/responseschema/2006\\">
+	<Response xmlns=\\"http://schemas.microsoft.com/exchange/autodiscover/outlook/requestschema/2006\\">
 		<User>
 			<DisplayName>COMPANY NAME Email</DisplayName>
 		</User>
@@ -214,10 +736,532 @@ exports[`handle Test Autodiscover URL /Autodiscover/Autodiscover.xml with method
 "
 `;
 
+exports[`handle Test Autodiscover URL /autodiscover/autodiscover.xml with method GET and fixture Blank AcceptableSchema: GET--autodiscover/autodiscover.xml 1`] = `
+"<?xml version=\\"1.0\\" encoding=\\"utf-8\\" ?>
+<Autodiscover xmlns=\\"http://schemas.microsoft.com/exchange/autodiscover/responseschema/2006\\">
+	<Response xmlns=\\"http://schemas.microsoft.com/exchange/autodiscover/outlook/requestschema/2006\\">
+		<User>
+			<DisplayName>COMPANY NAME Email</DisplayName>
+		</User>
+		<Account>
+			<AccountType>email</AccountType>
+			<Action>settings</Action>
+			<ServiceHome>support.company.com</ServiceHome>
+
+			<Protocol>
+				<Type>IMAP</Type>
+				<TTL>1</TTL>
+
+				<Server>mail.company.com</Server>
+				<Port>1234</Port>
+
+				<LoginName>user@contoso.com</LoginName>
+
+				<DomainRequired>on</DomainRequired>
+				<DomainName>contoso.com</DomainName>
+
+				<SPA>off</SPA>
+				<Encryption>SSL</Encryption>
+				<AuthRequired>on</AuthRequired>
+			</Protocol>
+		</Account>
+		<Account>
+			<AccountType>email</AccountType>
+			<Action>settings</Action>
+			<ServiceHome>support.company.com</ServiceHome>
+
+			<Protocol>
+				<Type>POP</Type>
+				<TTL>1</TTL>
+
+				<Server>mail.company.com</Server>
+				<Port>1234</Port>
+
+				<LoginName>user@contoso.com</LoginName>
+
+				<DomainRequired>on</DomainRequired>
+				<DomainName>contoso.com</DomainName>
+
+				<SPA>off</SPA>
+				<Encryption>SSL</Encryption>
+				<AuthRequired>on</AuthRequired>
+			</Protocol>
+		</Account>
+		<Account>
+			<AccountType>email</AccountType>
+			<Action>settings</Action>
+			<ServiceHome>support.company.com</ServiceHome>
+
+			<Protocol>
+				<Type>SMTP</Type>
+				<TTL>1</TTL>
+
+				<Server>mail.company.com</Server>
+				<Port>1234</Port>
+
+				<LoginName>user@contoso.com</LoginName>
+
+				<DomainRequired>on</DomainRequired>
+				<DomainName>contoso.com</DomainName>
+
+				<SPA>off</SPA>
+				<Encryption>SSL</Encryption>
+				<AuthRequired>on</AuthRequired>
+			</Protocol>
+		</Account>
+		<Action>
+			<Settings>
+				<Server>
+					<Type>MobileSync</Type>
+					<Url>mail.company.com</Url>
+					<Name>mobilesync</Name>
+					</Server>
+			</Settings>
+		</Action>
+		</Response>
+</Autodiscover>
+"
+`;
+
+exports[`handle Test Autodiscover URL /autodiscover/autodiscover.xml with method GET and fixture Expected: GET--autodiscover/autodiscover.xml 1`] = `
+"<?xml version=\\"1.0\\" encoding=\\"utf-8\\" ?>
+<Autodiscover xmlns=\\"http://schemas.microsoft.com/exchange/autodiscover/responseschema/2006\\">
+	<Response xmlns=\\"http://schemas.microsoft.com/exchange/autodiscover/outlook/responseschema/2006a\\">
+		<User>
+			<DisplayName>COMPANY NAME Email</DisplayName>
+		</User>
+		<Account>
+			<AccountType>email</AccountType>
+			<Action>settings</Action>
+			<ServiceHome>support.company.com</ServiceHome>
+
+			<Protocol>
+				<Type>IMAP</Type>
+				<TTL>1</TTL>
+
+				<Server>mail.company.com</Server>
+				<Port>1234</Port>
+
+				<LoginName>user@contoso.com</LoginName>
+
+				<DomainRequired>on</DomainRequired>
+				<DomainName>contoso.com</DomainName>
+
+				<SPA>off</SPA>
+				<Encryption>SSL</Encryption>
+				<AuthRequired>on</AuthRequired>
+			</Protocol>
+		</Account>
+		<Account>
+			<AccountType>email</AccountType>
+			<Action>settings</Action>
+			<ServiceHome>support.company.com</ServiceHome>
+
+			<Protocol>
+				<Type>POP</Type>
+				<TTL>1</TTL>
+
+				<Server>mail.company.com</Server>
+				<Port>1234</Port>
+
+				<LoginName>user@contoso.com</LoginName>
+
+				<DomainRequired>on</DomainRequired>
+				<DomainName>contoso.com</DomainName>
+
+				<SPA>off</SPA>
+				<Encryption>SSL</Encryption>
+				<AuthRequired>on</AuthRequired>
+			</Protocol>
+		</Account>
+		<Account>
+			<AccountType>email</AccountType>
+			<Action>settings</Action>
+			<ServiceHome>support.company.com</ServiceHome>
+
+			<Protocol>
+				<Type>SMTP</Type>
+				<TTL>1</TTL>
+
+				<Server>mail.company.com</Server>
+				<Port>1234</Port>
+
+				<LoginName>user@contoso.com</LoginName>
+
+				<DomainRequired>on</DomainRequired>
+				<DomainName>contoso.com</DomainName>
+
+				<SPA>off</SPA>
+				<Encryption>SSL</Encryption>
+				<AuthRequired>on</AuthRequired>
+			</Protocol>
+		</Account>
+		<Action>
+			<Settings>
+				<Server>
+					<Type>MobileSync</Type>
+					<Url>mail.company.com</Url>
+					<Name>mobilesync</Name>
+					</Server>
+			</Settings>
+		</Action>
+		</Response>
+</Autodiscover>
+"
+`;
+
+exports[`handle Test Autodiscover URL /autodiscover/autodiscover.xml with method GET and fixture Missing AcceptableSchema: GET--autodiscover/autodiscover.xml 1`] = `
+"<?xml version=\\"1.0\\" encoding=\\"utf-8\\" ?>
+<Autodiscover xmlns=\\"http://schemas.microsoft.com/exchange/autodiscover/responseschema/2006\\">
+	<Response xmlns=\\"http://schemas.microsoft.com/exchange/autodiscover/outlook/requestschema/2006\\">
+		<User>
+			<DisplayName>COMPANY NAME Email</DisplayName>
+		</User>
+		<Account>
+			<AccountType>email</AccountType>
+			<Action>settings</Action>
+			<ServiceHome>support.company.com</ServiceHome>
+
+			<Protocol>
+				<Type>IMAP</Type>
+				<TTL>1</TTL>
+
+				<Server>mail.company.com</Server>
+				<Port>1234</Port>
+
+				<LoginName>user@contoso.com</LoginName>
+
+				<DomainRequired>on</DomainRequired>
+				<DomainName>contoso.com</DomainName>
+
+				<SPA>off</SPA>
+				<Encryption>SSL</Encryption>
+				<AuthRequired>on</AuthRequired>
+			</Protocol>
+		</Account>
+		<Account>
+			<AccountType>email</AccountType>
+			<Action>settings</Action>
+			<ServiceHome>support.company.com</ServiceHome>
+
+			<Protocol>
+				<Type>POP</Type>
+				<TTL>1</TTL>
+
+				<Server>mail.company.com</Server>
+				<Port>1234</Port>
+
+				<LoginName>user@contoso.com</LoginName>
+
+				<DomainRequired>on</DomainRequired>
+				<DomainName>contoso.com</DomainName>
+
+				<SPA>off</SPA>
+				<Encryption>SSL</Encryption>
+				<AuthRequired>on</AuthRequired>
+			</Protocol>
+		</Account>
+		<Account>
+			<AccountType>email</AccountType>
+			<Action>settings</Action>
+			<ServiceHome>support.company.com</ServiceHome>
+
+			<Protocol>
+				<Type>SMTP</Type>
+				<TTL>1</TTL>
+
+				<Server>mail.company.com</Server>
+				<Port>1234</Port>
+
+				<LoginName>user@contoso.com</LoginName>
+
+				<DomainRequired>on</DomainRequired>
+				<DomainName>contoso.com</DomainName>
+
+				<SPA>off</SPA>
+				<Encryption>SSL</Encryption>
+				<AuthRequired>on</AuthRequired>
+			</Protocol>
+		</Account>
+		<Action>
+			<Settings>
+				<Server>
+					<Type>MobileSync</Type>
+					<Url>mail.company.com</Url>
+					<Name>mobilesync</Name>
+					</Server>
+			</Settings>
+		</Action>
+		</Response>
+</Autodiscover>
+"
+`;
+
 exports[`handle Test Autodiscover URL /autodiscover/autodiscover.xml with method GET: GET--autodiscover/autodiscover.xml 1`] = `
 "<?xml version=\\"1.0\\" encoding=\\"utf-8\\" ?>
 <Autodiscover xmlns=\\"http://schemas.microsoft.com/exchange/autodiscover/responseschema/2006\\">
 	<Response xmlns=\\"http://schemas.microsoft.com/exchange/autodiscover/outlook/responseschema/2006a\\">
+		<User>
+			<DisplayName>COMPANY NAME Email</DisplayName>
+		</User>
+		<Account>
+			<AccountType>email</AccountType>
+			<Action>settings</Action>
+			<ServiceHome>support.company.com</ServiceHome>
+
+			<Protocol>
+				<Type>IMAP</Type>
+				<TTL>1</TTL>
+
+				<Server>mail.company.com</Server>
+				<Port>1234</Port>
+
+				<LoginName>user@contoso.com</LoginName>
+
+				<DomainRequired>on</DomainRequired>
+				<DomainName>contoso.com</DomainName>
+
+				<SPA>off</SPA>
+				<Encryption>SSL</Encryption>
+				<AuthRequired>on</AuthRequired>
+			</Protocol>
+		</Account>
+		<Account>
+			<AccountType>email</AccountType>
+			<Action>settings</Action>
+			<ServiceHome>support.company.com</ServiceHome>
+
+			<Protocol>
+				<Type>POP</Type>
+				<TTL>1</TTL>
+
+				<Server>mail.company.com</Server>
+				<Port>1234</Port>
+
+				<LoginName>user@contoso.com</LoginName>
+
+				<DomainRequired>on</DomainRequired>
+				<DomainName>contoso.com</DomainName>
+
+				<SPA>off</SPA>
+				<Encryption>SSL</Encryption>
+				<AuthRequired>on</AuthRequired>
+			</Protocol>
+		</Account>
+		<Account>
+			<AccountType>email</AccountType>
+			<Action>settings</Action>
+			<ServiceHome>support.company.com</ServiceHome>
+
+			<Protocol>
+				<Type>SMTP</Type>
+				<TTL>1</TTL>
+
+				<Server>mail.company.com</Server>
+				<Port>1234</Port>
+
+				<LoginName>user@contoso.com</LoginName>
+
+				<DomainRequired>on</DomainRequired>
+				<DomainName>contoso.com</DomainName>
+
+				<SPA>off</SPA>
+				<Encryption>SSL</Encryption>
+				<AuthRequired>on</AuthRequired>
+			</Protocol>
+		</Account>
+		<Action>
+			<Settings>
+				<Server>
+					<Type>MobileSync</Type>
+					<Url>mail.company.com</Url>
+					<Name>mobilesync</Name>
+					</Server>
+			</Settings>
+		</Action>
+		</Response>
+</Autodiscover>
+"
+`;
+
+exports[`handle Test Autodiscover URL /autodiscover/autodiscover.xml with method POST and fixture Blank AcceptableSchema: POST--autodiscover/autodiscover.xml 1`] = `
+"<?xml version=\\"1.0\\" encoding=\\"utf-8\\" ?>
+<Autodiscover xmlns=\\"http://schemas.microsoft.com/exchange/autodiscover/responseschema/2006\\">
+	<Response xmlns=\\"http://schemas.microsoft.com/exchange/autodiscover/outlook/requestschema/2006\\">
+		<User>
+			<DisplayName>COMPANY NAME Email</DisplayName>
+		</User>
+		<Account>
+			<AccountType>email</AccountType>
+			<Action>settings</Action>
+			<ServiceHome>support.company.com</ServiceHome>
+
+			<Protocol>
+				<Type>IMAP</Type>
+				<TTL>1</TTL>
+
+				<Server>mail.company.com</Server>
+				<Port>1234</Port>
+
+				<LoginName>user@contoso.com</LoginName>
+
+				<DomainRequired>on</DomainRequired>
+				<DomainName>contoso.com</DomainName>
+
+				<SPA>off</SPA>
+				<Encryption>SSL</Encryption>
+				<AuthRequired>on</AuthRequired>
+			</Protocol>
+		</Account>
+		<Account>
+			<AccountType>email</AccountType>
+			<Action>settings</Action>
+			<ServiceHome>support.company.com</ServiceHome>
+
+			<Protocol>
+				<Type>POP</Type>
+				<TTL>1</TTL>
+
+				<Server>mail.company.com</Server>
+				<Port>1234</Port>
+
+				<LoginName>user@contoso.com</LoginName>
+
+				<DomainRequired>on</DomainRequired>
+				<DomainName>contoso.com</DomainName>
+
+				<SPA>off</SPA>
+				<Encryption>SSL</Encryption>
+				<AuthRequired>on</AuthRequired>
+			</Protocol>
+		</Account>
+		<Account>
+			<AccountType>email</AccountType>
+			<Action>settings</Action>
+			<ServiceHome>support.company.com</ServiceHome>
+
+			<Protocol>
+				<Type>SMTP</Type>
+				<TTL>1</TTL>
+
+				<Server>mail.company.com</Server>
+				<Port>1234</Port>
+
+				<LoginName>user@contoso.com</LoginName>
+
+				<DomainRequired>on</DomainRequired>
+				<DomainName>contoso.com</DomainName>
+
+				<SPA>off</SPA>
+				<Encryption>SSL</Encryption>
+				<AuthRequired>on</AuthRequired>
+			</Protocol>
+		</Account>
+		<Action>
+			<Settings>
+				<Server>
+					<Type>MobileSync</Type>
+					<Url>mail.company.com</Url>
+					<Name>mobilesync</Name>
+					</Server>
+			</Settings>
+		</Action>
+		</Response>
+</Autodiscover>
+"
+`;
+
+exports[`handle Test Autodiscover URL /autodiscover/autodiscover.xml with method POST and fixture Expected: POST--autodiscover/autodiscover.xml 1`] = `
+"<?xml version=\\"1.0\\" encoding=\\"utf-8\\" ?>
+<Autodiscover xmlns=\\"http://schemas.microsoft.com/exchange/autodiscover/responseschema/2006\\">
+	<Response xmlns=\\"http://schemas.microsoft.com/exchange/autodiscover/outlook/responseschema/2006a\\">
+		<User>
+			<DisplayName>COMPANY NAME Email</DisplayName>
+		</User>
+		<Account>
+			<AccountType>email</AccountType>
+			<Action>settings</Action>
+			<ServiceHome>support.company.com</ServiceHome>
+
+			<Protocol>
+				<Type>IMAP</Type>
+				<TTL>1</TTL>
+
+				<Server>mail.company.com</Server>
+				<Port>1234</Port>
+
+				<LoginName>user@contoso.com</LoginName>
+
+				<DomainRequired>on</DomainRequired>
+				<DomainName>contoso.com</DomainName>
+
+				<SPA>off</SPA>
+				<Encryption>SSL</Encryption>
+				<AuthRequired>on</AuthRequired>
+			</Protocol>
+		</Account>
+		<Account>
+			<AccountType>email</AccountType>
+			<Action>settings</Action>
+			<ServiceHome>support.company.com</ServiceHome>
+
+			<Protocol>
+				<Type>POP</Type>
+				<TTL>1</TTL>
+
+				<Server>mail.company.com</Server>
+				<Port>1234</Port>
+
+				<LoginName>user@contoso.com</LoginName>
+
+				<DomainRequired>on</DomainRequired>
+				<DomainName>contoso.com</DomainName>
+
+				<SPA>off</SPA>
+				<Encryption>SSL</Encryption>
+				<AuthRequired>on</AuthRequired>
+			</Protocol>
+		</Account>
+		<Account>
+			<AccountType>email</AccountType>
+			<Action>settings</Action>
+			<ServiceHome>support.company.com</ServiceHome>
+
+			<Protocol>
+				<Type>SMTP</Type>
+				<TTL>1</TTL>
+
+				<Server>mail.company.com</Server>
+				<Port>1234</Port>
+
+				<LoginName>user@contoso.com</LoginName>
+
+				<DomainRequired>on</DomainRequired>
+				<DomainName>contoso.com</DomainName>
+
+				<SPA>off</SPA>
+				<Encryption>SSL</Encryption>
+				<AuthRequired>on</AuthRequired>
+			</Protocol>
+		</Account>
+		<Action>
+			<Settings>
+				<Server>
+					<Type>MobileSync</Type>
+					<Url>mail.company.com</Url>
+					<Name>mobilesync</Name>
+					</Server>
+			</Settings>
+		</Action>
+		</Response>
+</Autodiscover>
+"
+`;
+
+exports[`handle Test Autodiscover URL /autodiscover/autodiscover.xml with method POST and fixture Missing AcceptableSchema: POST--autodiscover/autodiscover.xml 1`] = `
+"<?xml version=\\"1.0\\" encoding=\\"utf-8\\" ?>
+<Autodiscover xmlns=\\"http://schemas.microsoft.com/exchange/autodiscover/responseschema/2006\\">
+	<Response xmlns=\\"http://schemas.microsoft.com/exchange/autodiscover/outlook/requestschema/2006\\">
 		<User>
 			<DisplayName>COMPANY NAME Email</DisplayName>
 		</User>
