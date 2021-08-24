@@ -1,11 +1,10 @@
 import { TemplateSettings } from './types'
 import autoconfigTemplate from './views/autoconfig.xml'
-import swig from 'swig-templates'
+import { render } from 'mustache'
 
 // Mozilla Thunderbird
 export default (settings: TemplateSettings) => async (): Promise<Response> => {
-  const compiledTemplate = swig.compile(autoconfigTemplate)
-  const output = compiledTemplate({
+  const output = render(autoconfigTemplate, {
     ...settings,
   })
 

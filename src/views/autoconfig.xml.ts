@@ -5,8 +5,7 @@ export default `<?xml version="1.0" encoding="UTF-8"?>
 
 	    <displayName>{{info.name}} Email</displayName>
 	    <displayShortName>%EMAILLOCALPART%</displayShortName>
-
-		{%- if imap.host %}
+		{{ #imap.host }}
 	    <incomingServer type="imap">
 			<hostname>{{imap.host}}</hostname>
 			<port>{{imap.port}}</port>
@@ -14,9 +13,8 @@ export default `<?xml version="1.0" encoding="UTF-8"?>
 			<authentication>password-cleartext</authentication>
 			<username>%EMAILADDRESS%</username>
 		</incomingServer>
-		{% endif -%}
-
-		{%- if pop.host %}
+		{{ /imap.host }}
+		{{ #pop.host }}
 	    <incomingServer type="pop3">
 			<hostname>{{pop.host}}</hostname>
 			<port>{{pop.port}}</port>
@@ -24,9 +22,8 @@ export default `<?xml version="1.0" encoding="UTF-8"?>
 			<authentication>password-cleartext</authentication>
 			<username>%EMAILADDRESS%</username>
 		</incomingServer>
-		{% endif -%}
-
-		{%- if smtp.host %}
+		{{ /pop.host }}
+		{{ #smtp.host }}
 	    <outgoingServer type="smtp">
 			<hostname>{{smtp.host}}</hostname>
 			<port>{{smtp.port}}</port>
@@ -34,8 +31,7 @@ export default `<?xml version="1.0" encoding="UTF-8"?>
 			<authentication>password-cleartext</authentication>
 			<username>%EMAILADDRESS%</username>
 	    </outgoingServer>
-		{% endif -%}
-
+		{{ /smtp.host }}
 		<documentation url="{{info.url}}">
 			<descr lang="en">Generic settings page</descr>
 			<descr lang="fr">Paramètres généraux</descr>

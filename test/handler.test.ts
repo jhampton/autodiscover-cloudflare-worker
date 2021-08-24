@@ -33,7 +33,7 @@ describe('handle', () => {
     jest.resetModules()
   })
 
-  test('Expect 404 for root', async () => {
+  it('Expect 404 for root', async () => {
     const result = await handleRequest(
       new Request('/', {
         method: 'GET',
@@ -63,7 +63,7 @@ describe('handle', () => {
     })
   })
 
-  test(`Test Mobileconfig URL with method GET`, async () => {
+  it(`Test Mobileconfig URL with method GET`, async () => {
     const testRequest = new Request(
       `http://company.com/email.mobileconfig?email=username@domain.com`,
       {
@@ -78,7 +78,7 @@ describe('handle', () => {
     expect(text).toMatchSnapshot(`Mobileconfig`)
   })
 
-  test(`Test Autoconfig URL with method GET`, async () => {
+  it(`Test Autoconfig URL with method GET`, async () => {
     const testRequest = new Request(`http://company.com/mail/config-v1.1.xml`, {
       method: 'GET',
       body: '',
