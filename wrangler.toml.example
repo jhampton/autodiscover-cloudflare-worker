@@ -1,0 +1,44 @@
+name = "autodiscover-cloudflare-worker"
+type = "javascript"
+account_id = ""
+workers_dev = true
+
+# Environment
+[env.prod]
+#zone_id = "_your_zone_id_" # The ID of the domain to deploying to
+# Routes worker application will be served at. Can be multiple 'routes' or singular 'route'.
+#routes = ["example.tld/*", "example.tld/another/*"] # Multiple routes pattern
+# route = "example.tld/*" # Singular route patten
+
+# Define the ENV Vars for this environment
+[env.prod.vars]
+COMPANY_NAME = ""
+SUPPORT_URL = ""
+DOMAIN = ""
+IMAP_HOST = "imap.example.tld"
+IMAP_PORT = "993"
+IMAP_SOCKET = "SSL"
+POP_HOST = "pop.example.tld"
+POP_PORT = "995"
+POP_SOCKET = "SSL"
+SMTP_HOST = "smtp.example.tld"
+SMTP_PORT = "587"
+SMTP_SOCKET = "SSL"
+MOBILESYNC_URL = ""
+MOBILESYNC_NAME = ""
+LDAP_HOST = ""
+LDAP_PORT = ""
+LDAP_SOCKET = ""
+LDAP_BASE = ""
+LDAP_USER_FIELD = ""
+LDAP_USER_BASE = ""
+LDAP_SEARCH = ""
+PROFILE_IDENTIFIER = "tld.example.autodiscover"
+PROFILE_UUID = ""
+MAIL_UUID = ""
+LDAP_UUID = ""
+
+[build]
+command = "npm install && npm run build"
+[build.upload]
+format = "service-worker"
