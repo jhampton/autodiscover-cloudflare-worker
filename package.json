@@ -7,7 +7,7 @@
     "build": "webpack",
     "format": "prettier --write  '*.{json,js}' 'src/**/*.{js,ts}' 'test/**/*.{js,ts}'",
     "lint": "eslint --max-warnings=0 src && prettier --check '*.{json,js}' 'src/**/*.{js,ts}' 'test/**/*.{js,ts}'",
-    "test": "jest --config jestconfig.json --verbose --coverage",
+    "test": "jest --config jestconfig.json --verbose --coverage && istanbul-badges-readme",
     "test-watch": "jest --config jestconfig.json --verbose --watch"
   },
   "author": "author",
@@ -28,6 +28,7 @@
     "eslint": "^7.21.0",
     "eslint-config-prettier": "^8.1.0",
     "eslint-config-typescript": "^3.0.0",
+    "istanbul-badges-readme": "^1.4.0",
     "jest": "^27.0.1",
     "prettier": "^2.3.0",
     "service-worker-mock": "^2.0.5",

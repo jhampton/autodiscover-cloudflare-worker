@@ -4,6 +4,12 @@
 
 Based on https://github.com/Monogramm/autodiscover-email-settings
 
+## Coverage
+
+| Statements                  | Branches                | Functions                 | Lines             |
+| --------------------------- | ----------------------- | ------------------------- | ----------------- |
+| ![Statements](https://img.shields.io/badge/statements-83.33%25-yellow.svg) | ![Branches](https://img.shields.io/badge/branches-54.76%25-red.svg) | ![Functions](https://img.shields.io/badge/functions-90.91%25-brightgreen.svg) | ![Lines](https://img.shields.io/badge/lines-84.85%25-yellow.svg) |
+
 ## Setup taken from Monogramm/autodiscover-email-settings
 
 ## DNS settings
@@ -22,16 +28,16 @@ Based on https://github.com/Monogramm/autodiscover-email-settings
 
 Replace above variables with data according to this table
 
-| Variable        | Description                         |
-| --------------- | ----------------------------------- |
-| MX_DOMAIN       | The hostname name of your MX server |
-| DOMAIN          | Your apex/bare/naked Domain         |
-| PROXIED_DNS     | A placeholder `AAAA` record pointing to `100::`, which must be proxied through Cloudflare (orange-cloud in the DNS settings). This value specifically is the [reserved IPv6 discard prefix](https://tools.ietf.org/html/rfc6666) but is not the only value allowed. For example, you may also use an `A` record pointed to `192.0.2.1` or a `CNAME` pointed to any resolvable target. Whichever method you choose, your record must be proxied through Cloudflare (orange-clouded) and resolve successfully. |
-| IMAP_PORT       | Port for your IMAP server           |
-| POP_PORT        | Port for your POP server            |
-| SMTP_PORT       | Port for your SMTP server           |
-| LDAP_HOST       | The hostname of your LDAP server    |
-| LDAP_PORT       | Port for your LDAP server           |
+| Variable    | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| MX_DOMAIN   | The hostname name of your MX server                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| DOMAIN      | Your apex/bare/naked Domain                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| PROXIED_DNS | A placeholder `AAAA` record pointing to `100::`, which must be proxied through Cloudflare (orange-cloud in the DNS settings). This value specifically is the [reserved IPv6 discard prefix](https://tools.ietf.org/html/rfc6666) but is not the only value allowed. For example, you may also use an `A` record pointed to `192.0.2.1` or a `CNAME` pointed to any resolvable target. Whichever method you choose, your record must be proxied through Cloudflare (orange-clouded) and resolve successfully. |
+| IMAP_PORT   | Port for your IMAP server                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| POP_PORT    | Port for your POP server                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| SMTP_PORT   | Port for your SMTP server                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| LDAP_HOST   | The hostname of your LDAP server                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| LDAP_PORT   | Port for your LDAP server                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 
 ---
 
@@ -42,7 +48,7 @@ Replace above variables with data according to this table
 - Rename `wrangler.toml.example` to `wrangler.toml` and populate with variables. [Wrangler Docs](https://developers.cloudflare.com/workers/get-started/guide#6-preview-your-project)
 - To test, use `wrangler dev`, to build use `wrangler build`
 - Add the settings listed in `settings.ts` to your Cloudflare Worker Environment Variables
-- Set up DNS records 
+- Set up DNS records
 - Use `wrangler` to deploy your worker
 
 ## Credits
