@@ -8,7 +8,7 @@ export default `<?xml version="1.0" encoding="UTF-8"?>
 	<array>{{ #imapOrPop }}
 		<dict>
 			<key>EmailAccountDescription</key>
-			<string>{{email}}</string>
+			<string>{{info.name}} Email</string>
 			<key>EmailAccountName</key>
 			<string>{{email}}</string>
 			<key>EmailAccountType</key>

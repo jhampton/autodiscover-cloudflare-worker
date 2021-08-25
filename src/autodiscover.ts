@@ -46,6 +46,12 @@ export default (settings: TemplateSettings) =>
     const output = render(autoDiscoverTemplate, locals)
 
     return new Response(output, {
-      headers: { 'content-type': 'application/xml' },
+      headers: {
+        'content-type': 'text/xml',
+        'permissions-policy': 'interest-cohort=()',
+        'referrer-policy': 'no-referrer',
+        'expect-ct': 'max-age=600, enforce',
+        'content-security-policy': "frame-ancestors 'none'",
+      },
     })
   }

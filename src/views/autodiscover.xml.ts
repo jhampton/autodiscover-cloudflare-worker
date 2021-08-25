@@ -1,81 +1,46 @@
-export default `<?xml version="1.0" encoding="utf-8" ?>
+export default `<?xml version="1.0" encoding="UTF-8" ?>
 <Autodiscover xmlns="http://schemas.microsoft.com/exchange/autodiscover/responseschema/2006">
 	<Response xmlns="{{{schema}}}">
-		<User>
-			<DisplayName>{{info.name}} Email</DisplayName>
-		</User>
-		{{ #imap.host }}
 		<Account>
 			<AccountType>email</AccountType>
 			<Action>settings</Action>
-			<ServiceHome>{{info.url}}</ServiceHome>
-
+			<ServiceHome>{{{info.url}}}</ServiceHome>
+			{{ #imap.host }}
 			<Protocol>
 				<Type>IMAP</Type>
-				<TTL>1</TTL>
-
 				<Server>{{imap.host}}</Server>
 				<Port>{{imap.port}}</Port>
-
-				<LoginName>{{email}}</LoginName>
-
 				<DomainRequired>on</DomainRequired>
-				<DomainName>{{domain}}</DomainName>
-
 				<SPA>off</SPA>
-				<Encryption>{{imapenc}}</Encryption>
+				<SSL>on</SSL>
 				<AuthRequired>on</AuthRequired>
 			</Protocol>
-		</Account>
-		{{ /imap.host}}
-		{{ #pop.host }}
-		<Account>
-			<AccountType>email</AccountType>
-			<Action>settings</Action>
-			<ServiceHome>{{info.url}}</ServiceHome>
-
+			{{ /imap.host}}
+			{{ ^imap.host }}
+			{{ #pop.host }}
 			<Protocol>
 				<Type>POP</Type>
-				<TTL>1</TTL>
-
 				<Server>{{pop.host}}</Server>
 				<Port>{{pop.port}}</Port>
-
-				<LoginName>{{email}}</LoginName>
-
 				<DomainRequired>on</DomainRequired>
-				<DomainName>{{domain}}</DomainName>
-
 				<SPA>off</SPA>
-				<Encryption>{{popenc}}</Encryption>
+				<SSL>on</SSL>
 				<AuthRequired>on</AuthRequired>
 			</Protocol>
-		</Account>
-		{{ /pop.host }}
-		{{ #smtp.host }}
-		<Account>
-			<AccountType>email</AccountType>
-			<Action>settings</Action>
-			<ServiceHome>{{info.url}}</ServiceHome>
-
+			{{ /pop.host }}
+			{{ /imap.host }}
+		  {{ #smtp.host }}
 			<Protocol>
 				<Type>SMTP</Type>
-				<TTL>1</TTL>
-
 				<Server>{{smtp.host}}</Server>
 				<Port>{{smtp.port}}</Port>
-
-				<LoginName>{{email}}</LoginName>
-
 				<DomainRequired>on</DomainRequired>
-				<DomainName>{{domain}}</DomainName>
-
 				<SPA>off</SPA>
-				<Encryption>{{smtpenc}}</Encryption>
+				<SSL>on</SSL>
 				<AuthRequired>on</AuthRequired>
 			</Protocol>
+			{{ /smtp.host }}
 		</Account>
-		{{ /smtp.host }}
 		{{ #mobilesync.url }}
 		<Action>
 			<Settings>

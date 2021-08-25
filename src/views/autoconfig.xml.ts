@@ -2,7 +2,6 @@ export default `<?xml version="1.0" encoding="UTF-8"?>
 <clientConfig version="1.1">
 	<emailProvider id="{{domain}}">
 	    <domain>{{domain}}</domain>
-
 	    <displayName>{{info.name}} Email</displayName>
 	    <displayShortName>%EMAILLOCALPART%</displayShortName>
 		{{ #imap.host }}
