@@ -18,6 +18,7 @@ export default {
     host: __SMTP_HOST__,
     port: __SMTP_PORT__,
     socket: __SMTP_SOCKET__,
+    socketOpt: __SMTP_SOCKET_OPT__,
   },
   mobilesync: {
     url: __MOBILESYNC_URL__,

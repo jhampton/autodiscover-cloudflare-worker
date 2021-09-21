@@ -21,6 +21,7 @@ declare let __LDAP_UUID__: string
 declare let __IMAP_SOCKET__: string
 declare let __POP_SOCKET__: string
 declare let __SMTP_SOCKET__: string
+declare let __SMTP_SOCKET_OPT__: string
 declare let __MOBILESYNC_NAME__: string
 declare let __LDAP_SEARCH__: string
 declare let __SUPPORT_URL__: string

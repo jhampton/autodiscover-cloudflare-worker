@@ -26,7 +26,7 @@ export default `<?xml version="1.0" encoding="UTF-8"?>
 	    <outgoingServer type="smtp">
 			<hostname>{{smtp.host}}</hostname>
 			<port>{{smtp.port}}</port>
-			<socketType>{{smtp.socket}}</socketType>
+			<socketType>{{smtp.socketOpt}}</socketType>
 			<authentication>password-cleartext</authentication>
 			<username>%EMAILADDRESS%</username>
 	    </outgoingServer>
